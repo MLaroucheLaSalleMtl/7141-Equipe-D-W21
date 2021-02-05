@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6247480176480713052}
   - component: {fileID: 6247480176480713053}
   - component: {fileID: 6247480176480713050}
-  - component: {fileID: 6247480176480713051}
   - component: {fileID: 6247480176480713054}
+  - component: {fileID: 5406337427927343886}
   m_Layer: 0
   m_Name: MyFrog
   m_TagString: Untagged
@@ -99,8 +99,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15804318, y: 0.13717058}
-  m_Size: {x: 0.29478627, y: 0.30522257}
+  m_Offset: {x: -0.0025342107, y: -0.10137147}
+  m_Size: {x: 0.89028025, y: 0.89028025}
   m_Direction: 0
 --- !u!50 &6247480176480713050
 Rigidbody2D:
@@ -123,19 +123,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6247480176480713051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6247480176480713048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beca6af2ddd7f994e89c71ef5ce9a00d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 300
 --- !u!95 &6247480176480713054
 Animator:
   serializedVersion: 3
@@ -155,3 +142,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5406337427927343886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247480176480713048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13923d35a34451f4597e9db3c2cb4335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 300
