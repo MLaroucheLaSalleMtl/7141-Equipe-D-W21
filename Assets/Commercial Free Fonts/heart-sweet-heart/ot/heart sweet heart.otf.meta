@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 57bf4f75238584744afc1d8450c8de2d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Heart Sweet Heart
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b432e52406679a146b4176a93f013b9c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

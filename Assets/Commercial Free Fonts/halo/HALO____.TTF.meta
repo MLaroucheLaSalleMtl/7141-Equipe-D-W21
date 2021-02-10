@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fa82c5a37522eb84e8b624a8a90f02fa
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Halo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d8d2280f3bc25d34a8180d7d20e8512f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

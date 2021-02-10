@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 68264ce84f23cff469401a0a35fab32e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Nickley NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 72e8460bf2199cf4696f2dd522aedf16, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 7ccccb4fe6486bd48bdbaadfa7226902
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Barbatrick
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 546767abe0949ab449eb3f2d358c85d9, type: 3}
+  - {fileID: 12800000, guid: b1b25ea883f29f34fbd6da71accdf7eb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

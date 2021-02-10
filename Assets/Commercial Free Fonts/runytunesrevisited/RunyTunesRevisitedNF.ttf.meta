@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c3b88127299fa4d4f90165b7945367f4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Runy Tunes Revisited NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 80def2bf21a10514a9c800cf5faf396d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

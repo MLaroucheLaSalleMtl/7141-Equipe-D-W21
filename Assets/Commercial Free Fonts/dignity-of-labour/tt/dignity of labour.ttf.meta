@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6b6a9b7dac7c01147b5f6af5ba9742da
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dignity of Labour
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 40de0863f45bd8148965d70373fccbe1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

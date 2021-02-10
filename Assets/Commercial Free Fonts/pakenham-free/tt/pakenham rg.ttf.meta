@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3a1148307da0efc4eb1c0cb71bf253e0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Pakenham
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11ab4d6a8f1c9dd41b150b9e809cd4c9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

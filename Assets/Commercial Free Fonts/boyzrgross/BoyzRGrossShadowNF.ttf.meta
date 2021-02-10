@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: da8e70db6a8c6944a85a022430096d11
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Boyz R Gross NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 613a94b780bfc31489d3e58f036533a9, type: 3}
+  - {fileID: 12800000, guid: 093bde2cf70933744a7918a6baa08ef3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

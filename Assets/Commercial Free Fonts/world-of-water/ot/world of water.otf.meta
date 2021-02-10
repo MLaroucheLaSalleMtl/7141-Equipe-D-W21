@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6a55957bca758ab4aae61dcc52130e95
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - World of Water
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11458db8309b9234891e3ef2b3e68cb4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 76fceefd114ab294d85f1b293353dbfe
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cretino
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 263436004f761d14a8ac2d1c8f8cd810, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

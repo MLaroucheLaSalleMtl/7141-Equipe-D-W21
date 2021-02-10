@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b6ca06e225ad252429de1135f7fcd635
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Team Spirit NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 52dd4a8d34e02e547871983b9769cb6c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

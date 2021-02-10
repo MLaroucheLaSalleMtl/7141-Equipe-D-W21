@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 18ab057a30085fa4db8664556fbdefea
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Baveuse
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5647c10173a2c9c4f89af4e730811e11, type: 3}
+  - {fileID: 12800000, guid: 7727db700d79b1046a1b7ce3462de93d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

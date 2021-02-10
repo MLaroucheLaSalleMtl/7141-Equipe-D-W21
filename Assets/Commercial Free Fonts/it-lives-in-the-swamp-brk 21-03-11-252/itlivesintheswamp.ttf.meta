@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a6d2184bdb9e3ba4aa942b687bb175f4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - It Lives In The Swamp BRK
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 93016b927d607044bbac4baabd563594, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

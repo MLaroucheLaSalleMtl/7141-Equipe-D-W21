@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: c97ff31cbcb355f4bb4262517092bdc9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dustismo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 749ab1e2fd710a449baf583ef2749b33, type: 3}
+  - {fileID: 12800000, guid: 61b2c4a306a0c4048a7c15d8714068a2, type: 3}
+  - {fileID: 12800000, guid: f85202affa4e3ff41ab77e16abde5b46, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

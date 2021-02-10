@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1ccafbb2df1e46b41a81630522269adb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Deluxe Ducks
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fb983bece5f7f9c4a98a3b2c6a6cca9c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

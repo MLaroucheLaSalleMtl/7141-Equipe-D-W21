@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ac8eb5e2847d3fd469f792f1e3eb4ea0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ParaAminobenzoic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5689ee7b040f74c4fb7f50d82a936573, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

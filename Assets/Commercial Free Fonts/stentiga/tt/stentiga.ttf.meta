@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 9acd3a18f75960a40aab7386612ab3a1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Stentiga
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 34c77a64eb44a67439aad0ddb2234b3c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

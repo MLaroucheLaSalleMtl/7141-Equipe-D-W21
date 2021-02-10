@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ffdceca7daa92c04f9ceb1c4bf4000c8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Zorque
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 17e327381866dcc4488da6400b5b5e7b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 020cd01c980b32a45a100970e385351f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Old Gate Lane NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0112a1da3157ed7489e60f061df88782, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

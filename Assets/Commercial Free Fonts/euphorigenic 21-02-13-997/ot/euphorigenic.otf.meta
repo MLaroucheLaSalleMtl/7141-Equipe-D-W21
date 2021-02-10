@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 980a3a0b6e5ec654b81544bfac3bb591
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Euphorigenic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 47396654e1d28a1499cbe5940fb87b6b, type: 3}
+  - {fileID: 12800000, guid: d5507a8c2c96fcd4889084ce00739dd3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

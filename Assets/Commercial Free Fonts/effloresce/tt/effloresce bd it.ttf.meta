@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 656ad7433902f7041949e237bcd60435
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Effloresce
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 332a8e32e12202849a5f06fad4e3af95, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

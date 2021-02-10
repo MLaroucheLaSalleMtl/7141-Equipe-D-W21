@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ee3a2b60ad4568d4a859c1ab08a72174
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Popular Cafe NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8c8db744d77498e49b42940f4969aceb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

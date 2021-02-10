@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 5ba30aa40f1cb784e88a341133aeca1a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Copasetic NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 01b08a88c659a304c96a417a61a72a84, type: 3}
+  - {fileID: 12800000, guid: c06f257513d52e644bcd41715623258d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

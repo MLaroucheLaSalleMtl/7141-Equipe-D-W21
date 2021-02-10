@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: db124b9c10e1c43439396b05726db352
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hellbound
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8b0fe05737789ea4f8bd91157798e9fd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: fbbf2d7f766d0e142bd5fe509d7a6219
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Venus Rising
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e4b5058d84d499c4fbc1a864291a356c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

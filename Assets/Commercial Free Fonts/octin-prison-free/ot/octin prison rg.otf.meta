@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6fdaa7bbb1365f44ba3dbd0ed6a9aba0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Octin Prison
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a19384a39ab16794082c8b1dbd3e1b0e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

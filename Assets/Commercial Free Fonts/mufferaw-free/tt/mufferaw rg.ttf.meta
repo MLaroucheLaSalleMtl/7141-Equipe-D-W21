@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dd23788e6a574d54fb24b67cf792904e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mufferaw
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5ad2d2018c405da408ab552d6561afc2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

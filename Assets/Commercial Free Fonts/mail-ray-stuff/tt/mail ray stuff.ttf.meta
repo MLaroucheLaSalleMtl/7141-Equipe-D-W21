@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3789ec61c2588c54b95c4debd7b6bbc2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mail Ray Stuff
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 63b4759d968265148b9b4cad8efb4298, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

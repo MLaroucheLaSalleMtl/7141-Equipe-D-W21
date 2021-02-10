@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bc302546b50c79144a9358dfd6b0879c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rafika
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1b3a6bf460fd7ca40b914bf03072285f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

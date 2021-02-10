@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: caa2d169b1b55f8448efdd1e96532378
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Electroharmonix
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4a5699cf55accb548a31fd878d7cd5b7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

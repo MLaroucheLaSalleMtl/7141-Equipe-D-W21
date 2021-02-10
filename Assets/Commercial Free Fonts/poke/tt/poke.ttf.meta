@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 54e3fe2f22d75c14bb46943190f2f749
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Poke
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 937d79dca3da78442af2a8ca3ec22bda, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

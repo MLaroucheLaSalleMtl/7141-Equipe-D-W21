@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f326bb74793f49e4d831316ec0d05491
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hydrogen Whiskey
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 03107cc76f9eed94184c51cea2a7b1d9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

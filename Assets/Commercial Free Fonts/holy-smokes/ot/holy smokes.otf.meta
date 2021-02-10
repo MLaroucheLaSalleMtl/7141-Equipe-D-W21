@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ac83b2c16068bd84eaf99ec6796295a6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Holy Smokes
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 21dfe9143b70bc747b1898238a060651, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

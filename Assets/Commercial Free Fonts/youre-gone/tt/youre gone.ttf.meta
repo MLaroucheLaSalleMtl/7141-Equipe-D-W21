@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 6fcf61e0fc69ca2429adbb9443d8fe9b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - You're Gone
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f4e6432c8dce5ad4fbfb265c9826cf1a, type: 3}
+  - {fileID: 12800000, guid: d1c4343d427959e4983b31b711730019, type: 3}
+  - {fileID: 12800000, guid: e9f85fc2ee46ff244bacd0efa85e2107, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e7f0e8d4f8ffb674fa73582dcd2917cb
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sayso Chic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c46996bd7081e9745a30db51de523437, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

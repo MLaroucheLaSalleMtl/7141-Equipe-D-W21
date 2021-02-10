@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 76c1ee1eb48077e43af3ec2a50743ba8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Xirod
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b2558580670d9024f98349b074dfa1f5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

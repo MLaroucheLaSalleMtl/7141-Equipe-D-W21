@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b24ad19e0af6ffd418e2b0df4d6136e0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hand Me Down O (BRK)
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 61f853e2f1ea62a45804850ccae852e6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

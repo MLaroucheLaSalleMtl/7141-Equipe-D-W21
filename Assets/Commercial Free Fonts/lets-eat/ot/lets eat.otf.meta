@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1364d6f451f4f2145bc05c0a2d5c1597
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Let's Eat
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9229cbe9c8c985a429e823a9b54171df, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

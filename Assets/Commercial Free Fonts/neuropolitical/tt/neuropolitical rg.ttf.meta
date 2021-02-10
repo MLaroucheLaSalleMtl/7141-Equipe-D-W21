@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ae9349fc042e4834ebea198eb9e1d509
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Neuropolitical
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3093f5ee6f300f14fb7bfa96f5b6334b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

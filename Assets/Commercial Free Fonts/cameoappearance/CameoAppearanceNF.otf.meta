@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 93713d8ae49531a42bd3fea42f13a691
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Cameo Appearance NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a2e08fc28bb1bf948ac9b3d94c32f063, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

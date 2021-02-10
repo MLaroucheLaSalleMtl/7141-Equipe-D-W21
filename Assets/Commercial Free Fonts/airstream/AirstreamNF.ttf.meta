@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: bfd131b5ed16c7c4fb72790acc1c7ea4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Airstream NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 252bef6a25fd6214fadf39f1118739a7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 056239ca8e0313b4d930d46a9950564f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Larabiefont
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9364ac70fe548e64fa4ba686ea44e8ea, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

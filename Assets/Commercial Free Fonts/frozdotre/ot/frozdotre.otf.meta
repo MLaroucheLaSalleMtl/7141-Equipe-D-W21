@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ef6baabd25c86ba40810bda8d4b82776
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Frozdotre
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 4967cad79f74c8343ae6cac3eb9d6ed6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

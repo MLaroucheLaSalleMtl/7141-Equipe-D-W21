@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 2ee9ea0010f2b4f4a81d91291d988c9f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hawkeye
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 36900218a00a6664e8b84db81b57707f, type: 3}
+  - {fileID: 12800000, guid: 22bba10257d1cda4dbfb5ac568dd320e, type: 3}
+  - {fileID: 12800000, guid: 5ae3455ffeed056438a6a1e2ed6ba74a, type: 3}
+  - {fileID: 12800000, guid: f6eb8549f5b0be74b95708ca45b1a35c, type: 3}
+  - {fileID: 12800000, guid: 4160498c89a6cad4eae8de7302a19d82, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

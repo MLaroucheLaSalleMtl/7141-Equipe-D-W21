@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e92c6b5efbd57be46bd4be6f9a4a02bd
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fenwick
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d7f0736b2cffe3f4c84d221c746bab52, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

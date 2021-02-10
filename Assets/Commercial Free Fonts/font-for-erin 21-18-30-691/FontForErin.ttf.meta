@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dcb6fd76c086b9d47959a15728a17c3f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Font for Erin
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e9187b840bc5af240ab0cca737833cbc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

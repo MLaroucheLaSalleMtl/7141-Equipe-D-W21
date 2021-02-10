@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: cde5893d2a48a5b4181063f224ec4899
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Jungle Fever NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6628baa8344c55d4887b30945fa27f43, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

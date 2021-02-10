@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0fa9a919c38260d4db20b159918c1f5c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dirty Baker's Dozen
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 77e7a300538ab44488454636fe876e86, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

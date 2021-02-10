@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c6833b387a3caf34fba3c064d6818ec9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Interplanetary Crap
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 711265d16e0b5dd4392e33acfde2cc14, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

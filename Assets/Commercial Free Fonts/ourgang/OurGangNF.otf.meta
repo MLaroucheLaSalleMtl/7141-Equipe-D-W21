@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a8a7185cbf6f5d84f86ef9daf282e312
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Our Gang NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e6e43277674adb2499913b2f836118b1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

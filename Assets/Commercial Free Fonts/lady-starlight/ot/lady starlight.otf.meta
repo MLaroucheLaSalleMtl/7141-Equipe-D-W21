@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1487cae8ce15b754c87d78bb042ad33c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lady Starlight
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c29f9c01e8343cc4b9057cdae1c7c3bb, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 999d66307205a584b888e3c486dcb8ec
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kredit
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8144f87b4a4cb80418a918979163e1fa, type: 3}
+  - {fileID: 12800000, guid: e72b9b3c4af8f084594e7bd28c8075a2, type: 3}
+  - {fileID: 12800000, guid: a08110fbcb4fe6b459ec46d42a23ead4, type: 3}
+  - {fileID: 12800000, guid: 15cfd227ab90e1d44b09f01e24e24fbc, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

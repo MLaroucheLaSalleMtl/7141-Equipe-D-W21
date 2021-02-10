@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3b433e7e03d65e34682a13b38c7068c1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hooked Up 101
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7968410bccfd89a468efe6c7b9b01308, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

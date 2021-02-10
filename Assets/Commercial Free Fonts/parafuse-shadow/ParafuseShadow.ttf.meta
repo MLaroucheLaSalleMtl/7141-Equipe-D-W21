@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ac6e6a2bec5d6a147bffa0b7e10a627a
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Parafuse Shadow
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0a3fe04c8f666f9449b29dac479a32d2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

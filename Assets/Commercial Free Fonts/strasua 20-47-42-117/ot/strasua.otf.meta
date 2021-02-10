@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 67603b6941b17fe4eaabcc93b3668a5b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Strasua
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3465adb5bb1f0e647abe1e0a58af832a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

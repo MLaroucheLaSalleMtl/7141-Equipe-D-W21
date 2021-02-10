@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 664237f5208bd3144a1a80615c529610
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fake Receipt
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 53f9e030772255542b73fa34308a139d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

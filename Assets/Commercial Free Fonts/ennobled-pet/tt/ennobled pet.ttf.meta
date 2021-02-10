@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 155bef5d9fe97134faef2f16b6dc0c98
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ennobled Pet
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b3cf59767f4acc74dbefaed018ee0821, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

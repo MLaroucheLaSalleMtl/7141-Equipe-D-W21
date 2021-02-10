@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 857ef410fb5838841ba167cd91fa52e9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - SF Buttacup Lettering
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e03875546303c1846b736cb9ac88e233, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

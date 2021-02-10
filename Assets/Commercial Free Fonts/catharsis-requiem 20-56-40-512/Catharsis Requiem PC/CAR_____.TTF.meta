@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 1d36afe5344c5d041ac0e45207d714ea
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Catharsis Requiem
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0829b43be32f6c04a852d3d0ffaa28d6, type: 3}
+  - {fileID: 12800000, guid: fb10748e9bf89f44386cbf20695b73a5, type: 3}
+  - {fileID: 12800000, guid: f8c3070d6ac930a4c958b191a83c7577, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

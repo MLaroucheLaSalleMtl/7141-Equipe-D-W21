@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: ec40c8eb2d92e7d4d9db0427a1eb58ee
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Home Sweet Home
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: fbc6bb1462d8208419b796429f5b3847, type: 3}
+  - {fileID: 12800000, guid: 675c0067908f67445bc2a9ab3ce825b8, type: 3}
+  - {fileID: 12800000, guid: f04c05a863ebde2438d7e34148e69ba5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

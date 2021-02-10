@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 5c6747e1bdffb7f4492fd98d53f64b00
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mister Firley
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 92e1734870e51cc499a95ff6103f420e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

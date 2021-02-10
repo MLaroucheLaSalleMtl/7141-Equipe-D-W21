@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 04835bf349b3e2943a86ca737cb2e7db
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Platonick NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 13ef73b9ee019f641b2fa4805b0cf91a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

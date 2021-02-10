@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f7bb29d237151124a8e90f94c7438f62
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Edmunds
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d051459d8877b1e459cb2384484e236a, type: 3}
+  - {fileID: 12800000, guid: 37e0cf4aa18fb974b9c149035f0741d0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

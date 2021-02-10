@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6a5f74bce33412f49943f7e02335b53f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Malache Crunch
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 459e7e8000c27114ca402acebda162d2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

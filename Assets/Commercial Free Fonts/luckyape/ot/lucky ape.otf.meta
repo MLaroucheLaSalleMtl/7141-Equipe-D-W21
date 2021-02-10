@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 955649e160d47ea4d9a5414043c24425
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lucky Ape
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 22723093fa8392e4b8ba23b2c4479c89, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

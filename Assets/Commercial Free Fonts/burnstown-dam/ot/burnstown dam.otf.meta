@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b9b6c45c60416c446bdcb84fbb5b72f8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Burnstown Dam
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 18f9b5b212cab5f4abc0d121872b91d3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

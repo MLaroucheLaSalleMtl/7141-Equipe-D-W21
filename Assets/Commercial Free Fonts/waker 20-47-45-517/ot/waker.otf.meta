@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 3ea46767138ba8c4788dd6b198b632fc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Waker
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 81c92b35be176514abc22a4d53ab1cb2, type: 3}
+  - {fileID: 12800000, guid: 0c2f3a022424b10488bbfd599785f137, type: 3}
+  - {fileID: 12800000, guid: cbe8aa13ba3a57f4c94ec631d0721609, type: 3}
+  - {fileID: 12800000, guid: fa77a8e4d38b17341a2d8cde7f9fc60c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

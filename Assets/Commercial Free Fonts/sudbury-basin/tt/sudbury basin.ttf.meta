@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ea8ff0c7e9ed3f148a3ade077d669f5b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sudbury Basin
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3021741119372bb44a0ec189770369d0, type: 3}
+  - {fileID: 12800000, guid: 38f2ef3ce1b74db40bda8401894b7a9a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e415433ea6778a14db4f739c17f6aad8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Materhorn NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d4489261326e73c49b7e1c1999e6a3f4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6a34afab9c90cd5498f5b3db49ec8eb4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Sarsaparilla NF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 35b53f60814943a4f893d508b31d8430, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

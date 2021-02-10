@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a5d895629638bfc488d3f9b38ada0ff2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Die Nasty
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 15e34df1a9a1746469ce9f86fb7f51ba, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
