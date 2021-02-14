@@ -11,6 +11,22 @@ public class Move : MonoBehaviour
     public float speed = 300f;
     Animator anim;
     // Start is called before the first frame update
+
+    void Menu()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            GameObject ip = Inventory.instance.inventoryPanel;
+            if (!ip.activeSelf)
+            {
+                ip.SetActive(true);
+            }
+            else
+            {
+                ip.SetActive(false);
+            }
+        }
+    }
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -41,6 +57,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         //OnMove();
+        Menu();
     }
 
     private void FixedUpdate()

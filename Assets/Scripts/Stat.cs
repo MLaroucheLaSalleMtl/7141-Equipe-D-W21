@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stat : MonoBehaviour //script dans le but d'attribue des stat a des personnages
+public class Stat : MonoBehaviour //script dans le but d'attribue des stats a des personnages
 {
     public string characterName; //variable string public pour le Nom
     public int characterLevel; //variable int public pour le niveau
