@@ -56,23 +56,21 @@ public class BattleManager : MonoBehaviour
 
     void PlayerTurn() //fonction pour les actions du joueur pendant sont tour
     {
-        combatText.text = "Pick an action"; //afficher Pick an action dans la zone texte de combats
-    
+        combatText.text = "Pick an action?"; //afficher Pick an action dans la zone texte de combats
     }
 
     IEnumerator PlayerAttack() //fonction pour les attack normal du player
     {
-        bool isDead = enemyStat.TakeDamage(playerStat.damagePerTurn); //fait du degat a l'enemy et check si il est mort
-
+        bool isDead = enemyStat.TakeDamage(playerStat.basicDamage); //fait du degat a l'enemy et check si il est mort
         enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
-        combatText.text = "You Attacked For " + playerStat.damagePerTurn + "DMG!"; //affiche le nombre de point d'attack
+        combatText.text = "You Attacked For " + playerStat.basicDamage + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
 
         if (isDead) //si l'enemy est mort
         {
             state = BattleState.WON; //state devient WON
-            ExitBattle(); //appelle la fonction ExitBattle
+            StartCoroutine(ExitBattle()); //appelle la fonction ExitBattle
         }
         else //sinon
         {
@@ -83,16 +81,125 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerHealthPotion() //fonction pour les heal du player
     {
-        playerStat.Heal(playerStat.healPerTurn); //appelle la fonction heal dans le script stat
+        playerStat.OnHeal(playerStat.healthPotionPoints); //appelle la fonction heal dans le script stat
 
         objectHUD.gameObject.SetActive(false); //desactive la fenetre des objets
         playerHUD.SetHP(playerStat.currentHp); //update le hp du joueur
-        combatText.text = "You Healed For " + playerStat.healPerTurn + "HP!"; //affiche le nombre de vie ajouter
+        combatText.text = "You Healed For " + playerStat.healthPotionPoints + " HP!"; //affiche le nombre de vie ajouter
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
 
         state = BattleState.ENEMYTURN; //le state est rendu ENEMYTURN
         StartCoroutine(EnemyTurn()); //appelle la fonction EnemyTurn
+    }
+
+    IEnumerator PlayerManaPotion() //*Change*
+    {
+        playerStat.OnMana(playerStat.manaPotionPoints);
+
+        objectHUD.gameObject.SetActive(false); //desactive la fenetre des objets
+        playerHUD.SetMana(playerStat.currentMana); //update le hp du joueur
+        combatText.text = "You Mana UP For " + playerStat.manaPotionPoints + " Mana!"; //affiche le nombre de vie ajouter
+
+        yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+        state = BattleState.ENEMYTURN; //le state est rendu ENEMYTURN
+        StartCoroutine(EnemyTurn()); //appelle la fonction EnemyTurn
+    }
+
+    IEnumerator PlayerFireFlower() //*CHANGE*
+    {
+        bool isDead = enemyStat.TakeDamage(playerStat.fireFlowerDamage);
+
+        objectHUD.gameObject.SetActive(false);
+        enemyHUD.SetHP(enemyStat.currentHp);
+
+        combatText.text = "Your Object Did " + playerStat.fireFlowerDamage + " DMG!"; //affiche le nombre de point d'attack
+
+        yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+        if (isDead) //si l'enemy est mort
+        {
+            state = BattleState.WON; //state devient WON
+            StartCoroutine(ExitBattle()); //appelle la fonction ExitBattle
+        }
+        else //sinon
+        {
+            state = BattleState.ENEMYTURN; //state devient ENEMYTURN
+            StartCoroutine(EnemyTurn()); //appelle la fonction ENEMYTURN
+        }
+    }
+
+    IEnumerator PlayerVenemousSpit() //*Change*
+    {
+        bool isDead = enemyStat.TakeDamage(playerStat.spellVenemousSpitDmg); //fait du degat a l'enemy et check si il est mort
+
+        spellHUD.gameObject.SetActive(false);
+        playerStat.currentMana -= playerStat.spellVenemousSpitMana;
+        enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
+        combatText.text = "Venemous Spit Did " + playerStat.spellVenemousSpitDmg + " DMG!"; //affiche le nombre de point d'attack
+
+        yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+        if (isDead) //si l'enemy est mort
+        {
+            state = BattleState.WON; //state devient WON
+            StartCoroutine(ExitBattle()); //appelle la fonction ExitBattle
+        }
+        else //sinon
+        {
+            state = BattleState.ENEMYTURN; //state devient ENEMYTURN
+            StartCoroutine(EnemyTurn()); //appelle la fonction ENEMYTURN
+        }
+    }
+
+    IEnumerator PlayerWaterball() 
+    {
+        bool isDead = enemyStat.TakeDamage(playerStat.spellWaterballDmg); //fait du degat a l'enemy et check si il est mort
+
+        spellHUD.gameObject.SetActive(false);
+        playerStat.currentMana -= playerStat.spellWaterballMana;
+        enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
+        combatText.text = "Waterball Did " + playerStat.spellWaterballDmg + " DMG!"; //affiche le nombre de point d'attack
+
+        yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+        if (isDead) //si l'enemy est mort
+        {
+            state = BattleState.WON; //state devient WON
+            StartCoroutine(ExitBattle()); //appelle la fonction ExitBattle
+        }
+        else //sinon
+        {
+            state = BattleState.ENEMYTURN; //state devient ENEMYTURN
+            StartCoroutine(EnemyTurn()); //appelle la fonction ENEMYTURN
+        }
+    }
+
+    IEnumerator PlayerMudThrow()
+    {
+        bool isDead = enemyStat.TakeDamage(playerStat.spellMudThrowDmg); //fait du degat a l'enemy et check si il est mort
+
+        spellHUD.gameObject.SetActive(false);
+        playerStat.currentMana -= playerStat.spellMudThrowMana;
+        enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
+        combatText.text = "MudThrow Did " + playerStat.spellMudThrowDmg + " DMG!"; //affiche le nombre de point d'attack
+
+        yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+        if (isDead) //si l'enemy est mort
+        {
+            state = BattleState.WON; //state devient WON
+            StartCoroutine(ExitBattle()); //appelle la fonction ExitBattle
+        }
+        else //sinon
+        {
+            state = BattleState.ENEMYTURN; //state devient ENEMYTURN
+            StartCoroutine(EnemyTurn()); //appelle la fonction ENEMYTURN
+        }
     }
 
     IEnumerator EnemyTurn() //fonction pour le tour du enemy
@@ -101,8 +208,9 @@ public class BattleManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
 
-        bool isDead = playerStat.TakeDamage(enemyStat.damagePerTurn); //fait du degat au joueur et check si il est mort 
+        bool isDead = playerStat.TakeDamage(enemyStat.basicDamage); //fait du degat au joueur et check si il est mort 
         playerHUD.SetHP(playerStat.currentHp); //update le hp du joueur
+        combatText.text = "He Attack You For " + enemyStat.basicDamage + " DMG!";
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
 
@@ -123,6 +231,10 @@ public class BattleManager : MonoBehaviour
         if (state == BattleState.WON) //si le combat est gagné
         {
             combatText.text = "You've Defeated Your Enemy!"; //affiche dans le dialogue You've Defeated Your Enemy!
+
+            yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+            SceneManager.LoadScene("Scene Principale"); //change de scene pour la scene principale
         }
         else if (state == BattleState.LOST) //si le combat est perdu
         {
@@ -132,6 +244,11 @@ public class BattleManager : MonoBehaviour
 
             SceneManager.LoadScene("Scene Principale"); //change de scene pour la scene principale
         }
+    }
+
+    void Flee()
+    {
+        SceneManager.LoadScene("Scene Principale");
     }
 
     public void OnAttackClick() //action du button attack
@@ -152,5 +269,65 @@ public class BattleManager : MonoBehaviour
         }
 
         StartCoroutine(PlayerHealthPotion()); //appelle la fonction PlayerHealthPotion
+    }
+
+    public void OnManaPotionClick() //action du button heal *CHANGE*
+    {
+        if (state != BattleState.PLAYERTURN) //si ce n'est pas le tour du joueur
+        {
+            return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
+        }
+
+        StartCoroutine(PlayerManaPotion()); //appelle la fonction PlayerHealthPotion
+    }
+
+    public void OnFireFlowerClick()
+    {
+        if (state != BattleState.PLAYERTURN) //si ce n'est pas le tour du joueur
+        {
+            return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
+        }
+
+        StartCoroutine(PlayerFireFlower());
+    }
+
+    public void OnVenemousSpit() //*change*
+    {
+        if (state != BattleState.PLAYERTURN || playerStat.spellVenemousSpitMana > playerStat.currentMana) //si ce n'est pas le tour du joueur
+        {
+            return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
+        }
+
+        StartCoroutine(PlayerVenemousSpit());
+    }
+
+    public void OnWaterball()
+    {
+        if (state != BattleState.PLAYERTURN || playerStat.spellWaterballMana > playerStat.currentMana) //si ce n'est pas le tour du joueur
+        {
+            return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
+        }
+
+        StartCoroutine(PlayerWaterball());
+    }
+
+    public void OnMudThrow() 
+    {
+        if (state != BattleState.PLAYERTURN || playerStat.spellMudThrowMana > playerStat.currentMana) //si ce n'est pas le tour du joueur
+        {
+            return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
+        }
+
+        StartCoroutine(PlayerMudThrow());
+    }
+
+    public void OnFleeClick()
+    {
+        if (state != BattleState.PLAYERTURN)
+        {
+            return;
+        }
+
+        Flee();
     }
 }

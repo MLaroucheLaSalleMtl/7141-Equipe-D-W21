@@ -7,6 +7,7 @@ public class HUDManager : MonoBehaviour
 {
     public GameObject objectHUD; //point vers la fenetre des objets
     public GameObject spellHUD; //pointe vers la fenetre des spells
+    public GameObject fleeHUD; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +23,27 @@ public class HUDManager : MonoBehaviour
     {
         objectHUD.gameObject.SetActive(false);
         spellHUD.gameObject.SetActive(false);
+        fleeHUD.gameObject.SetActive(false);
     }
+
     public void OpenSpell()
     {
         objectHUD.gameObject.SetActive(false);
         spellHUD.gameObject.SetActive(true);
+        fleeHUD.gameObject.SetActive(false);
     }
+
     public void OpenObject()
     {
         objectHUD.gameObject.SetActive(true);
         spellHUD.gameObject.SetActive(false);
+        fleeHUD.gameObject.SetActive(false);
+    }
+
+    public void OpenFlee()
+    {
+        objectHUD.gameObject.SetActive(false);
+        spellHUD.gameObject.SetActive(false);
+        fleeHUD.gameObject.SetActive(true);
     }
 }

@@ -7,8 +7,18 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public string characterName; //variable string public pour le Nom
     public int characterLevel; //variable int public pour le niveau
 
-    public int damagePerTurn; //variable int public pour le nombre de damage par tour
-    public int healPerTurn; //variable int public pour le nombre de vie par tour
+    public int basicDamage; //variable int public pour le nombre de damage par tour
+
+    public int spellVenemousSpitDmg;
+    public int spellVenemousSpitMana;
+    public int spellWaterballDmg;
+    public int spellWaterballMana;
+    public int spellMudThrowDmg;
+    public int spellMudThrowMana;
+
+    public int healthPotionPoints;
+    public int manaPotionPoints;
+    public int fireFlowerDamage;
 
     public int maxHp; //variable int public pour le maximum hp
     public int currentHp; //varriable int public pour le hp actuel
@@ -29,13 +39,21 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
         }
     }
 
-    public void Heal(int heals) //fonction qui redonne de la vie
+    public void OnHeal(int healUP) //fonction qui redonne de la vie
     {
-        //*faire en sorte de reduire le nombre de potions
-        currentHp += heals; //current hp + healPerTurn
+        currentHp += healUP; //current hp + healPerTurn
         if (currentHp > maxHp) //si le current hp va en haut de la vie normale
         {
             currentHp = maxHp; //remet la vie a 100%
+        }
+    }
+
+    public void OnMana(int manaUP) //fonction qui redonne de la vie *CHANGE*
+    {
+        currentMana += manaUP; //current hp + healPerTurn
+        if (currentMana > maxMana) //si le current hp va en haut de la vie normale
+        {
+            currentMana = maxMana; //remet la vie a 100%
         }
     }
 }

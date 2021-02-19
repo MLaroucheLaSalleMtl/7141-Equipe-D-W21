@@ -46,12 +46,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Grand-PAPA
   characterLevel: 2
-  damagePerTurn: 15
-  healPerTurn: 10
-  maxHp: 25
-  currentHp: 15
-  maxMana: 30
-  currentMana: 10
+  basicDamage: 35
+  spellVenemousSpitDmg: 0
+  spellVenemousSpitMana: 0
+  spellWaterballDmg: 0
+  spellWaterballMana: 0
+  spellMudThrowDmg: 0
+  spellMudThrowMana: 0
+  healthPotionPoints: 0
+  manaPotionPoints: 0
+  fireFlowerDamage: 0
+  maxHp: 200
+  currentHp: 200
+  maxMana: 100
+  currentMana: 100
 --- !u!212 &5220653193549982803
 SpriteRenderer:
   m_ObjectHideFlags: 0

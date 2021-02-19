@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {//Code de mouvement repris des éléments vu du cours 
@@ -80,6 +81,7 @@ public class Move : MonoBehaviour
             if (Random.Range(1, 1001) <= 10)
             {
                 Debug.Log("Encountered an enemy");
+                SceneManager.LoadScene("Scene Combat");
             }
         }
     }
