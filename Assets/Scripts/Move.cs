@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
-{//Code repris des éléments vu du cours 
+{//Code de mouvement repris des éléments vu du cours 
 
     Rigidbody2D rigid;
     Vector2 dir = new Vector2();
     public float speed = 300f;
     Animator anim;
-    // Start is called before the first frame update
+
+    public LayerMask randomEELayer;
 
     void Menu()
     {
@@ -27,6 +28,7 @@ public class Move : MonoBehaviour
             }
         }
     }
+    // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -49,8 +51,12 @@ public class Move : MonoBehaviour
     private void Movement()
     {
         Vector2 pos = new Vector2();
+        Vector2 didItMove = pos;
         pos += (dir.normalized * speed) * Time.fixedDeltaTime;
         rigid.velocity = pos;
+
+        if (didItMove != pos)
+        { CheckForEncounters(); }
     }
 
     // Update is called once per frame
@@ -65,4 +71,17 @@ public class Move : MonoBehaviour
         Animate();
         Movement();
     }
+
+    private void CheckForEncounters()
+    {
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEELayer) != null)
+        {
+            //On ne veut pas qu'à chaque tuile mauve foncé la grenouille rencontre un ennemi. Seulement une fois de temps en temps
+            if (Random.Range(1, 1001) <= 10)
+            {
+                Debug.Log("Encountered an enemy");
+            }
+        }
+    }
+
 }

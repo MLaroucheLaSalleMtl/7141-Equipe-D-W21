@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a320046e723de84469e286e34a088af2, type: 3}
   m_Name: Health Potion
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: 0}
-  heal: 0
+  itemName: Health Potion
+  icon: {fileID: 21300000, guid: eb185d7a545e81f41813be224c404a7a, type: 3}
+  heal: 30
+  mana: 0
+  damage: 0

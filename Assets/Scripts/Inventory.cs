@@ -30,6 +30,8 @@ public List<Item> list = new List<Item>();
             index++;
         }
     }
+
+
     public void Add(Item item)
     {
         if (list.Count < 9)

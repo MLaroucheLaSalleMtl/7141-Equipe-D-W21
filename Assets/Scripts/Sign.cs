@@ -20,6 +20,7 @@ public class Sign : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space)&& dialogueActive)
         {
+            
             if (dialogueBox.activeInHierarchy)
             {
                 dialogueBox.SetActive(false);

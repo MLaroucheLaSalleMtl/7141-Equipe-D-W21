@@ -8,6 +8,8 @@ using UnityEngine;
 public class Consumable : Item
 {
     public int heal = 0;
+    public int mana = 0;
+    public int damage = 0;
     public override void Use()
     {
         GameObject player = Inventory.instance.player;
@@ -16,6 +18,15 @@ public class Consumable : Item
        // playerHealth.Heal(heal);
         Inventory.instance.Remove(this);
     }
+
+   /* public void Revive()
+    {
+        if(currentHealth == 0)
+        {
+            currentHealth = maxHealth
+        }
+    }
+   */
 
    /* public void Heal()
     {
@@ -30,4 +41,22 @@ public class Consumable : Item
 
     } */
 
+  /*  public void ManaHeal()
+    {
+        currentMana += amount;
+        if(currentMana> maxMana)
+        {
+            maxMana = currentMna;
+        }
+        mpbar.value = currentMana / maxMana;
+    }*/
+
+   /* public void ItemDamage()
+    {
+        currentItem = amount;
+        if (currentItem > EnemyHealth)
+        {
+            EnemyHealth = 0;
+        }
+    }*/
 }

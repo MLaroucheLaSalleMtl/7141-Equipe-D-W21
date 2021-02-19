@@ -6,7 +6,10 @@ public class DestroyItem : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+            Destroy(gameObject);
+        //}
     }
 
     // Start is called before the first frame update

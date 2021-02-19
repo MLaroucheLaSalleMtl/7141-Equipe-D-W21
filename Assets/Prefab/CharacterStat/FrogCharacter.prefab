@@ -47,10 +47,11 @@ MonoBehaviour:
   characterName: Frog
   characterLevel: 1
   damagePerTurn: 20
+  healPerTurn: 100
   maxHp: 100
-  currentHp: 100
+  currentHp: 50
   maxMana: 100
-  currentMana: 100
+  currentMana: 50
 --- !u!212 &6688458502415752264
 SpriteRenderer:
   m_ObjectHideFlags: 0
