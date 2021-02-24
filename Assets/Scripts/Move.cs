@@ -5,30 +5,18 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
-{//Code de mouvement repris des éléments vu du cours 
+{
+    //Code de mouvement repris des éléments vu du cours 
 
     Rigidbody2D rigid;
     Vector2 dir = new Vector2();
     public float speed = 300f;
     Animator anim;
-
+    [SerializeField] private InventoryMenu menu_Inventory;
     public LayerMask randomEELayer;
+    private Inventory inventory;
 
-    void Menu()
-    {
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            GameObject ip = Inventory.instance.inventoryPanel;
-            if (!ip.activeSelf)
-            {
-                ip.SetActive(true);
-            }
-            else
-            {
-                ip.SetActive(false);
-            }
-        }
-    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +52,7 @@ public class Move : MonoBehaviour
     void Update()
     {
         //OnMove();
-        Menu();
+
     }
 
     private void FixedUpdate()
@@ -73,17 +61,43 @@ public class Move : MonoBehaviour
         Movement();
     }
 
+    /* private void Awake()
+     {
+         inventory = new Inventory();
+         menu_Inventory.setInventory(inventory);
+
+     }*/
     private void CheckForEncounters()
     {
+        int randomNumb = Random.Range(1, 6);
+
         if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEELayer) != null)
         {
             //On ne veut pas qu'à chaque tuile mauve foncé la grenouille rencontre un ennemi. Seulement une fois de temps en temps
             if (Random.Range(1, 1001) <= 10)
             {
                 Debug.Log("Encountered an enemy");
-                SceneManager.LoadScene("Scene Combat");
+                Debug.Log(randomNumb);
+
+                switch (randomNumb)
+                {
+                    case 1:
+                        SceneManager.LoadScene("Scene Combat SlimeBlue");
+                        break;
+                    case 2:
+                        SceneManager.LoadScene("Scene Combat SlimeYellow");
+                        break;
+                    case 3:
+                        SceneManager.LoadScene("Scene Combat SlimeRed");
+                        break;
+                    case 4:
+                        SceneManager.LoadScene("Scene Combat SlimeSpecial");
+                        break;
+                    case 5:
+                        SceneManager.LoadScene("Scene Combat Goblin");
+                        break;
+                }
             }
         }
     }
-
 }

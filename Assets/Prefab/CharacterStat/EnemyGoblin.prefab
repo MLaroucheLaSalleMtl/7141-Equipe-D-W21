@@ -45,13 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Goblin
-  characterLevel: 3
-  damagePerTurn: 30
-  healPerTurn: 10
-  maxHp: 50
-  currentHp: 50
-  maxMana: 25
-  currentMana: 25
+  characterLevel: 50
+  basicDamage: 40
+  spellVenemousSpitDmg: 0
+  spellVenemousSpitMana: 0
+  spellWaterballDmg: 0
+  spellWaterballMana: 0
+  spellMudThrowDmg: 0
+  spellMudThrowMana: 0
+  healthPotionPoints: 0
+  manaPotionPoints: 0
+  fireFlowerDamage: 0
+  maxHp: 100
+  currentHp: 100
+  maxMana: 100
+  currentMana: 100
 --- !u!212 &5220653193549982803
 SpriteRenderer:
   m_ObjectHideFlags: 0

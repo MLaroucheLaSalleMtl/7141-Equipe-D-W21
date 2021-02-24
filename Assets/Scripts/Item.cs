@@ -2,14 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : ScriptableObject
+public class Item
 {
-    public string itemName;
-    public Sprite icon;
-
-    public virtual void Use()
+    public enum ItemType
     {
+        HealthPotion,
+        ManaPotion,
+        MagicFly,
+        BurningFlower,
+        Gold,
+        MagicMushroom
 
     }
-    
+
+    public ItemType itemType;
+    public int amount;
+
+
+
+
+
+
+
+
+
 }
+

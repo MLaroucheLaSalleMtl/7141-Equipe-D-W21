@@ -15,7 +15,6 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public int spellWaterballMana;
     public int spellMudThrowDmg;
     public int spellMudThrowMana;
-
     public int healthPotionPoints;
     public int manaPotionPoints;
     public int fireFlowerDamage;

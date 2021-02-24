@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleInventory : Consumable
+public class BattleInventory 
 {
     public int healthPotion = 0;
     public int manaPotion = 0;

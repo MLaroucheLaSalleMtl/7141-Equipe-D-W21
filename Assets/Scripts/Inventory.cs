@@ -2,60 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class Inventory : MonoBehaviour
+public class Inventory:MonoBehaviour
 {
-public List<Item> list = new List<Item>();
-    public GameObject player;
-    public GameObject inventoryPanel;
+    private List<Item> itemList;
 
-    public static Inventory instance;
 
-    void updatePanelSlots()
+    public Inventory()
     {
-        int index = 0;
-        foreach(Transform child in inventoryPanel.transform)
-        {
-            inventorySlotManager slot = child.GetComponent<inventorySlotManager>();
-            if (index < list.Count)
-            {
-                slot.item = list[index];
-            }
-            else
-            {
-                slot.item = null;
-            }
-            slot.updateInfo();
-            index++;
-        }
+        itemList = new List<Item>();
+
+        AddItem(new Item { itemType = Item.ItemType.HealthPotion, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.ManaPotion, amount = 1 });
+        AddItem(new Item { itemType = Item.ItemType.MagicFly, amount = 1 });
+       // Debug.Log("Inventory");
     }
 
 
-    public void Add(Item item)
+    public void AddItem(Item item)
     {
-        if (list.Count < 9)
-        {
-            list.Add(item);
-        }
-        updatePanelSlots();
-    }
-    public void Remove(Item item)
-    {
-        list.Remove(item);
-        updatePanelSlots();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        instance = this;
-        updatePanelSlots();
+        itemList.Add(item);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public List<Item> GetItemList()
     {
-        
+        return itemList;
     }
-    
+
+
+
+
 }
+

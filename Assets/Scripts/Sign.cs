@@ -9,6 +9,7 @@ public class Sign : MonoBehaviour
     public Text dialogueText;
     public string dialogue;
     public bool dialogueActive;
+
     // Start is called before the first frame update
     void Start()
     {

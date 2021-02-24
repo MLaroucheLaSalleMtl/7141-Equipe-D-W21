@@ -7,7 +7,7 @@ public class HUDManager : MonoBehaviour
 {
     public GameObject objectHUD; //point vers la fenetre des objets
     public GameObject spellHUD; //pointe vers la fenetre des spells
-    public GameObject fleeHUD; 
+    public GameObject fleeHUD;
 
     // Start is called before the first frame update
     void Start()

@@ -46,18 +46,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Frog
   characterLevel: 99
-  basicDamage: 20
-  spellVenemousSpitDmg: 40
+  basicDamage: 15
+  spellVenemousSpitDmg: 30
   spellVenemousSpitMana: 50
-  spellWaterballDmg: 80
+  spellWaterballDmg: 45
   spellWaterballMana: 100
-  spellMudThrowDmg: 20
-  spellMudThrowMana: 10
-  healthPotionPoints: 50
-  manaPotionPoints: 50
-  fireFlowerDamage: 75
-  maxHp: 100
-  currentHp: 100
+  spellMudThrowDmg: 25
+  spellMudThrowMana: 20
+  healthPotionPoints: 100
+  manaPotionPoints: 75
+  fireFlowerDamage: 50
+  maxHp: 200
+  currentHp: 200
   maxMana: 100
   currentMana: 100
 --- !u!212 &6688458502415752264

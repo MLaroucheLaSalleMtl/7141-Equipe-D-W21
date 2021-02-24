@@ -10,7 +10,7 @@ public class textChest : MonoBehaviour
     public string dialogueBefore;
     public string dialogueAfter;
     public bool dialogueActive;
-    int isTheChestIsOpen = 0;
+    int isTheChestOpen = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,29 +23,29 @@ public class textChest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && dialogueActive)
         {
-
+        
             if (dialogueBox.activeInHierarchy)
             {
                 dialogueBox.SetActive(false);
             }
             else
             {
-                dialogueBox.SetActive(true);
-                if (isTheChestIsOpen == 0)
+                if (isTheChestOpen == 0)
                 {
+                    dialogueBox.SetActive(true);
                     dialogueText.text = dialogueBefore;
-                    isTheChestIsOpen = 1;
+                    isTheChestOpen = 1;
                 }
                 else
-                { 
+                {
+                    dialogueBox.SetActive(true);
                     dialogueText.text = dialogueAfter;
                 }
-
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {

@@ -9,6 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene Principale.unity
     guid: 5a0540712a92df643b223b338c0ad575
   - enabled: 1
-    path: Assets/Scenes/Scene Combat.unity
+    path: Assets/Scenes/Scene Combat Boss.unity
     guid: a746bc06308d65f458e20c7ca36bbc66
+  - enabled: 1
+    path: Assets/Scenes/Scene Combat Boss.unity
+    guid: a746bc06308d65f458e20c7ca36bbc66
+  - enabled: 1
+    path: Assets/Scenes/Scene Combat Goblin.unity
+    guid: 8249992addbe9a64e80726805a0dec47
+  - enabled: 1
+    path: Assets/Scenes/Scene Combat SlimeBlue.unity
+    guid: 635ea1a3ad470e042a1621e26abe472f
+  - enabled: 1
+    path: Assets/Scenes/Scene Combat SlimeRed.unity
+    guid: 2942017f8797f5e4c94df6f1ba477d74
+  - enabled: 1
+    path: Assets/Scenes/Scene Combat SlimeSpecial.unity
+    guid: ac41420188d13874c823c2d05348c78e
+  - enabled: 1
+    path: Assets/Scenes/Scene Combat SlimeYellow.unity
+    guid: eff0093988675464ea97d50221155830
   m_configObjects: {}

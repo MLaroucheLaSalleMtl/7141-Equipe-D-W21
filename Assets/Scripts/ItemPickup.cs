@@ -7,11 +7,7 @@ public class ItemPickup : Item
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-           
-            Destroy(other.gameObject);
-        }
+        
     }
     // Start is called before the first frame update
 

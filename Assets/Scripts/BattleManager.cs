@@ -57,12 +57,16 @@ public class BattleManager : MonoBehaviour
     void PlayerTurn() //fonction pour les actions du joueur pendant sont tour
     {
         combatText.text = "Pick an action?"; //afficher Pick an action dans la zone texte de combats
+        playerHUD.SetHUD(playerStat);
+        enemyHUD.SetHUD(enemyStat);
     }
 
     IEnumerator PlayerAttack() //fonction pour les attack normal du player
     {
         bool isDead = enemyStat.TakeDamage(playerStat.basicDamage); //fait du degat a l'enemy et check si il est mort
         enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        enemyHUD.SetHUD(enemyStat);
+
         combatText.text = "You Attacked For " + playerStat.basicDamage + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -85,6 +89,8 @@ public class BattleManager : MonoBehaviour
 
         objectHUD.gameObject.SetActive(false); //desactive la fenetre des objets
         playerHUD.SetHP(playerStat.currentHp); //update le hp du joueur
+        playerHUD.SetHUD(playerStat);
+
         combatText.text = "You Healed For " + playerStat.healthPotionPoints + " HP!"; //affiche le nombre de vie ajouter
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -99,6 +105,7 @@ public class BattleManager : MonoBehaviour
 
         objectHUD.gameObject.SetActive(false); //desactive la fenetre des objets
         playerHUD.SetMana(playerStat.currentMana); //update le hp du joueur
+        playerHUD.SetHUD(playerStat);
         combatText.text = "You Mana UP For " + playerStat.manaPotionPoints + " Mana!"; //affiche le nombre de vie ajouter
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -113,6 +120,7 @@ public class BattleManager : MonoBehaviour
 
         objectHUD.gameObject.SetActive(false);
         enemyHUD.SetHP(enemyStat.currentHp);
+        enemyHUD.SetHUD(enemyStat);
 
         combatText.text = "Your Object Did " + playerStat.fireFlowerDamage + " DMG!"; //affiche le nombre de point d'attack
 
@@ -137,7 +145,9 @@ public class BattleManager : MonoBehaviour
         spellHUD.gameObject.SetActive(false);
         playerStat.currentMana -= playerStat.spellVenemousSpitMana;
         enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        enemyHUD.SetHUD(enemyStat);
         playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
+        playerHUD.SetHUD(playerStat);
         combatText.text = "Venemous Spit Did " + playerStat.spellVenemousSpitDmg + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -161,7 +171,9 @@ public class BattleManager : MonoBehaviour
         spellHUD.gameObject.SetActive(false);
         playerStat.currentMana -= playerStat.spellWaterballMana;
         enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        enemyHUD.SetHUD(enemyStat);
         playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
+        playerHUD.SetHUD(playerStat);
         combatText.text = "Waterball Did " + playerStat.spellWaterballDmg + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -185,7 +197,9 @@ public class BattleManager : MonoBehaviour
         spellHUD.gameObject.SetActive(false);
         playerStat.currentMana -= playerStat.spellMudThrowMana;
         enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
+        enemyHUD.SetHUD(enemyStat);
         playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
+        playerHUD.SetHUD(playerStat);
         combatText.text = "MudThrow Did " + playerStat.spellMudThrowDmg + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -210,6 +224,7 @@ public class BattleManager : MonoBehaviour
 
         bool isDead = playerStat.TakeDamage(enemyStat.basicDamage); //fait du degat au joueur et check si il est mort 
         playerHUD.SetHP(playerStat.currentHp); //update le hp du joueur
+        playerHUD.SetHUD(playerStat);
         combatText.text = "He Attack You For " + enemyStat.basicDamage + " DMG!";
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
