@@ -16,7 +16,9 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public int spellMudThrowDmg;
     public int spellMudThrowMana;
     public int healthPotionPoints;
+    public int nbHealthPot;
     public int manaPotionPoints;
+    public int nbManaPot;
     public int fireFlowerDamage;
 
     public int maxHp; //variable int public pour le maximum hp
@@ -41,6 +43,7 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public void OnHeal(int healUP) //fonction qui redonne de la vie
     {
         currentHp += healUP; //current hp + healPerTurn
+        nbHealthPot -= 1;
         if (currentHp > maxHp) //si le current hp va en haut de la vie normale
         {
             currentHp = maxHp; //remet la vie a 100%
@@ -50,6 +53,7 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public void OnMana(int manaUP) //fonction qui redonne de la vie *CHANGE*
     {
         currentMana += manaUP; //current hp + healPerTurn
+        nbManaPot -= 1;
         if (currentMana > maxMana) //si le current hp va en haut de la vie normale
         {
             currentMana = maxMana; //remet la vie a 100%

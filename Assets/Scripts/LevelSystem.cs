@@ -1,33 +1,89 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSystem : MonoBehaviour
+[System.Serializable]
+public class LevelSystem
 {
-    private int level;
-    private int exp;
-    private int expToNextLvl;
+    public int experience;
+    public int currentLevel;
+    public Action OnLvlUp;
 
-    public LevelSystem()
+    public int maxExp;
+    public int maxLvl = 99;
+
+    public LevelSystem(int level, Action OnLevUp)
     {
-        level = 0;
-        exp = 0;
-        expToNextLvl = 100;
+        maxExp = GetXpForLvl(maxLvl);
+        currentLevel = level;
+        experience = GetXpForLvl(level);
+        OnLvlUp = OnLevUp;
     }
 
-    public void AddExp(int amount)
+    public int GetXpForLvl(int level)
     {
-        exp += amount;
-        if (exp >= expToNextLvl)
-        { 
-            level++;
-            exp -= expToNextLvl;
+        if (level > maxLvl)
+            return 0;
+
+        int firstPass = 0;
+        int secondPass = 0;
+        for (int lvlCycle = 1; lvlCycle < level; lvlCycle++)
+        {
+            firstPass += (int)Math.Floor(lvlCycle + (300.0f * Math.Pow(2.0f, lvlCycle / 7.0f)));
+            secondPass = firstPass / 4;
         }
+        if (secondPass > maxExp && maxExp != 0)
+            return maxExp;
+        if (secondPass < 0)
+            return maxExp;
+
+        return secondPass;
     }
 
-    public int GetLvlNumber()
+    public int GetLvlForXp(int exp)
     {
-        return level;
+        if (exp > maxExp)
+            return maxExp;
+
+        int firstPass = 0;
+        int secondPass = 0;
+        for (int lvlCycle = 1; lvlCycle <= maxLvl; lvlCycle++)
+        {
+            firstPass += (int)Math.Floor(lvlCycle + (300.0f * Math.Pow(2.0f, lvlCycle / 7.0f)));
+            secondPass = firstPass / 4;
+
+            if (secondPass > exp)
+                return lvlCycle;
+        }
+        if (exp > secondPass)
+            return maxLvl;
+
+        return 0;
+    }
+
+    public bool AddXp(int amount)
+    {
+        if (amount + experience < 0 || experience > maxExp)
+        {
+            if (experience > maxExp)
+                experience = maxExp;
+            return false;
+        }
+
+        int oldLvl = GetLvlForXp(experience);
+        experience += amount;
+        if (oldLvl < GetLvlForXp(experience))
+        {
+            if (currentLevel < GetLvlForXp(experience))
+            {
+                currentLevel = GetLvlForXp(experience);
+                if (OnLvlUp != null)
+                    OnLvlUp.Invoke();
+                return true;
+            }
+        }
+        return false;
     }
 
     // Start is called before the first frame update

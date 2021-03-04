@@ -7,12 +7,13 @@ using UnityEngine.SceneManagement;
 public class Move : MonoBehaviour
 {
     //Code de mouvement repris des éléments vu du cours 
+    public GameObject player;
 
     Rigidbody2D rigid;
     Vector2 dir = new Vector2();
     public float speed = 300f;
     Animator anim;
-    [SerializeField] private InventoryMenu menu_Inventory;
+
     public LayerMask randomEELayer;
     private Inventory inventory;
 
@@ -22,12 +23,12 @@ public class Move : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        ChangeToSavePosition();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         dir = context.ReadValue<Vector2>();//new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
     }
 
     private void Animate()
@@ -46,6 +47,8 @@ public class Move : MonoBehaviour
 
         if (didItMove != pos)
         { CheckForEncounters(); }
+
+        SavePlayerPosition();
     }
 
     // Update is called once per frame
@@ -61,12 +64,6 @@ public class Move : MonoBehaviour
         Movement();
     }
 
-    /* private void Awake()
-     {
-         inventory = new Inventory();
-         menu_Inventory.setInventory(inventory);
-
-     }*/
     private void CheckForEncounters()
     {
         int randomNumb = Random.Range(1, 6);
@@ -74,7 +71,7 @@ public class Move : MonoBehaviour
         if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEELayer) != null)
         {
             //On ne veut pas qu'à chaque tuile mauve foncé la grenouille rencontre un ennemi. Seulement une fois de temps en temps
-            if (Random.Range(1, 1001) <= 10)
+            if (Random.Range(1, 7001) <= 10)
             {
                 Debug.Log("Encountered an enemy");
                 Debug.Log(randomNumb);
@@ -99,5 +96,21 @@ public class Move : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SavePlayerPosition() 
+    {
+        PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
+        PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+        PlayerPrefs.SetFloat("PlayerZ", player.transform.position.z);
+
+    }
+
+    public void ChangeToSavePosition()
+    {
+        transform.position = new Vector3
+        (PlayerPrefs.GetFloat("PlayerX"), 
+        PlayerPrefs.GetFloat("PlayerY"), 
+        PlayerPrefs.GetFloat("PlayerZ"));
     }
 }

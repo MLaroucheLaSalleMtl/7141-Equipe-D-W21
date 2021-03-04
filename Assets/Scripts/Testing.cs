@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
-    private void Awake()
-    {
-        LevelSystem levelSystem = new LevelSystem();
-        Debug.Log(levelSystem.GetLvlNumber());
-        levelSystem.AddExp(50);
-        Debug.Log(levelSystem.GetLvlNumber());
-        levelSystem.AddExp(60);
-        Debug.Log(levelSystem.GetLvlNumber());
-    }
+    //private void Awake()
+    //{
+    //    LevelSystem levelSystem = new LevelSystem();
+    //    Debug.Log(levelSystem.GetLvlNumber());
+    //    levelSystem.AddExp(50);
+    //    Debug.Log(levelSystem.GetLvlNumber());
+    //    levelSystem.AddExp(60);
+    //    Debug.Log(levelSystem.GetLvlNumber());
+    //}
 
 
     // Start is called before the first frame update

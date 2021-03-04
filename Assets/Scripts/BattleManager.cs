@@ -18,6 +18,8 @@ public class BattleManager : MonoBehaviour
     Stat enemyStat; //point vers le scrtip Stat du enemy
 
     public Text combatText; //point vers la boite de dialogue
+    public Text numberHealthPot;
+    public Text numberManaPot;
 
     public BattleHUD playerHUD; //point vers le playerHUD
     public BattleHUD enemyHUD; //point vers le enemyHUD
@@ -57,6 +59,8 @@ public class BattleManager : MonoBehaviour
     void PlayerTurn() //fonction pour les actions du joueur pendant sont tour
     {
         combatText.text = "Pick an action?"; //afficher Pick an action dans la zone texte de combats
+        numberHealthPot.text = "x" + playerStat.nbHealthPot;
+        numberManaPot.text = "x" + playerStat.nbManaPot;
         playerHUD.SetHUD(playerStat);
         enemyHUD.SetHUD(enemyStat);
     }
@@ -148,6 +152,7 @@ public class BattleManager : MonoBehaviour
         enemyHUD.SetHUD(enemyStat);
         playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
         playerHUD.SetHUD(playerStat);
+
         combatText.text = "Venemous Spit Did " + playerStat.spellVenemousSpitDmg + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -174,6 +179,7 @@ public class BattleManager : MonoBehaviour
         enemyHUD.SetHUD(enemyStat);
         playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
         playerHUD.SetHUD(playerStat);
+
         combatText.text = "Waterball Did " + playerStat.spellWaterballDmg + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -200,6 +206,7 @@ public class BattleManager : MonoBehaviour
         enemyHUD.SetHUD(enemyStat);
         playerHUD.SetMana(playerStat.currentMana); //update le hp du enemy
         playerHUD.SetHUD(playerStat);
+
         combatText.text = "MudThrow Did " + playerStat.spellMudThrowDmg + " DMG!"; //affiche le nombre de point d'attack
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
@@ -219,6 +226,8 @@ public class BattleManager : MonoBehaviour
     IEnumerator EnemyTurn() //fonction pour le tour du enemy
     {
         combatText.text = enemyStat.characterName + " Is Attacking!"; //affiche dans le dialogue le nom de l'enemy Is Atacking!
+        numberHealthPot.text = "x" + playerStat.nbHealthPot;
+        numberManaPot.text = "x" + playerStat.nbManaPot;
 
         yield return new WaitForSeconds(2f); //attendre 2 secondes
 
@@ -278,7 +287,7 @@ public class BattleManager : MonoBehaviour
 
     public void OnHealthPotionClick() //action du button heal
     {
-        if (state != BattleState.PLAYERTURN) //si ce n'est pas le tour du joueur
+        if (state != BattleState.PLAYERTURN || playerStat.nbHealthPot <= 0) //si ce n'est pas le tour du joueur
         {
             return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
         }
@@ -288,7 +297,7 @@ public class BattleManager : MonoBehaviour
 
     public void OnManaPotionClick() //action du button heal *CHANGE*
     {
-        if (state != BattleState.PLAYERTURN) //si ce n'est pas le tour du joueur
+        if (state != BattleState.PLAYERTURN || playerStat.nbManaPot <= 0) //si ce n'est pas le tour du joueur
         {
             return; //retroune rien si le joueur appuye sur le button pendant que ce n'est pas son tour
         }
