@@ -14,7 +14,7 @@ public class PlayerLvlUp : MonoBehaviour
 
     public void OnLvlUp()
     {
-        print("I level up!");
+        print("Level up!");
     }
 
     // Update is called once per frame

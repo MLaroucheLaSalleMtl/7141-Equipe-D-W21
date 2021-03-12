@@ -11,11 +11,11 @@ public class LevelSystem
     public Action OnLvlUp;
 
     public int maxExp;
-    public int maxLvl = 99;
+    public int maxLevel = 99;
 
     public LevelSystem(int level, Action OnLevUp)
     {
-        maxExp = GetXpForLvl(maxLvl);
+        maxExp = GetXpForLvl(maxLevel);
         currentLevel = level;
         experience = GetXpForLvl(level);
         OnLvlUp = OnLevUp;
@@ -23,7 +23,7 @@ public class LevelSystem
 
     public int GetXpForLvl(int level)
     {
-        if (level > maxLvl)
+        if (level > maxLevel)
             return 0;
 
         int firstPass = 0;
@@ -48,7 +48,7 @@ public class LevelSystem
 
         int firstPass = 0;
         int secondPass = 0;
-        for (int lvlCycle = 1; lvlCycle <= maxLvl; lvlCycle++)
+        for (int lvlCycle = 1; lvlCycle <= maxLevel; lvlCycle++)
         {
             firstPass += (int)Math.Floor(lvlCycle + (300.0f * Math.Pow(2.0f, lvlCycle / 7.0f)));
             secondPass = firstPass / 4;
@@ -57,7 +57,7 @@ public class LevelSystem
                 return lvlCycle;
         }
         if (exp > secondPass)
-            return maxLvl;
+            return maxLevel;
 
         return 0;
     }

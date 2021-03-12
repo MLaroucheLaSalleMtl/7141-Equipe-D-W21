@@ -59,7 +59,7 @@ MonoBehaviour:
   nbHealthPot: 2
   manaPotionPoints: 75
   nbManaPot: 2
-  fireFlowerDamage: 50
+  fireFlowerDamage: 35
   maxHp: 200
   currentHp: 200
   maxMana: 100

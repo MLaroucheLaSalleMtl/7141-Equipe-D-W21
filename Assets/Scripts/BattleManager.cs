@@ -8,6 +8,7 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST} //state du co
 
 public class BattleManager : MonoBehaviour
 {
+    public GameObject blankImage;
     public GameObject playerCharacter; //point vers les stats prefab du joueur 
     public GameObject enemyCharacter; //point vers les stats prefab de l'enemy
 
@@ -32,6 +33,7 @@ public class BattleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        blankImage.gameObject.SetActive(true);
         state = BattleState.START; //declare que le state == START
         StartCoroutine(SetupBattle()); //appelle la fonction SetupBattle et appelle StartCoroutine
     }
@@ -58,6 +60,7 @@ public class BattleManager : MonoBehaviour
 
     void PlayerTurn() //fonction pour les actions du joueur pendant sont tour
     {
+        blankImage.gameObject.SetActive(false);
         combatText.text = "Pick an action?"; //afficher Pick an action dans la zone texte de combats
         numberHealthPot.text = "x" + playerStat.nbHealthPot;
         numberManaPot.text = "x" + playerStat.nbManaPot;
@@ -67,6 +70,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerAttack() //fonction pour les attack normal du player
     {
+        blankImage.gameObject.SetActive(true);
         bool isDead = enemyStat.TakeDamage(playerStat.basicDamage); //fait du degat a l'enemy et check si il est mort
         enemyHUD.SetHP(enemyStat.currentHp); //update le hp du enemy
         enemyHUD.SetHUD(enemyStat);
@@ -89,6 +93,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerHealthPotion() //fonction pour les heal du player
     {
+        blankImage.gameObject.SetActive(true);
         playerStat.OnHeal(playerStat.healthPotionPoints); //appelle la fonction heal dans le script stat
 
         objectHUD.gameObject.SetActive(false); //desactive la fenetre des objets
@@ -105,6 +110,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerManaPotion() //*Change*
     {
+        blankImage.gameObject.SetActive(true);
         playerStat.OnMana(playerStat.manaPotionPoints);
 
         objectHUD.gameObject.SetActive(false); //desactive la fenetre des objets
@@ -120,6 +126,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerFireFlower() //*CHANGE*
     {
+        blankImage.gameObject.SetActive(true);
         bool isDead = enemyStat.TakeDamage(playerStat.fireFlowerDamage);
 
         objectHUD.gameObject.SetActive(false);
@@ -144,6 +151,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerVenemousSpit() //*Change*
     {
+        blankImage.gameObject.SetActive(true);
         bool isDead = enemyStat.TakeDamage(playerStat.spellVenemousSpitDmg); //fait du degat a l'enemy et check si il est mort
 
         spellHUD.gameObject.SetActive(false);
@@ -171,6 +179,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerWaterball() 
     {
+        blankImage.gameObject.SetActive(true);
         bool isDead = enemyStat.TakeDamage(playerStat.spellWaterballDmg); //fait du degat a l'enemy et check si il est mort
 
         spellHUD.gameObject.SetActive(false);
@@ -198,6 +207,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator PlayerMudThrow()
     {
+        blankImage.gameObject.SetActive(true);
         bool isDead = enemyStat.TakeDamage(playerStat.spellMudThrowDmg); //fait du degat a l'enemy et check si il est mort
 
         spellHUD.gameObject.SetActive(false);
@@ -225,6 +235,7 @@ public class BattleManager : MonoBehaviour
 
     IEnumerator EnemyTurn() //fonction pour le tour du enemy
     {
+        blankImage.gameObject.SetActive(true);  
         combatText.text = enemyStat.characterName + " Is Attacking!"; //affiche dans le dialogue le nom de l'enemy Is Atacking!
         numberHealthPot.text = "x" + playerStat.nbHealthPot;
         numberManaPot.text = "x" + playerStat.nbManaPot;
