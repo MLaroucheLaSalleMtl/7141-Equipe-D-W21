@@ -13,6 +13,9 @@ public class LevelSystem
     public int maxExp;
     public int maxLevel = 99;
 
+    public static LevelSystem instance = null; //singleton
+
+
     public LevelSystem(int level, Action OnLevUp)
     {
         maxExp = GetXpForLvl(maxLevel);

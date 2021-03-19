@@ -32,6 +32,7 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
         currentHp -= dmg; //moins de vie sur le damagePerTurn
         if (currentHp <= 0) //si la vie est egal ou en bas de 0 retourn TRUE
         {
+            currentHp = 0;
             return true;
         }
         else //sinon retourne FALSE

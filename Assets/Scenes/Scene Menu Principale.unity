@@ -1261,8 +1261,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 155.92075}
-  m_SizeDelta: {x: 1155.8337, y: 374.8867}
+  m_AnchoredPosition: {x: 0, y: 125.254364}
+  m_SizeDelta: {x: 1155.8337, y: 436.2194}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690993282
 MonoBehaviour:
@@ -1304,8 +1304,10 @@ MonoBehaviour:
 
     -Use "M" to open the mini-map
 
-    -Use "Escape"
-    to pause the game
+    -Use "L" to
+    open level details
+
+    -Use "Escape" to pause the game
 
 '
 --- !u!222 &690993283
@@ -1401,7 +1403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 825499298}
   m_Layer: 0
-  m_Name: HowToPlay Menu
+  m_Name: HowTo Play Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
