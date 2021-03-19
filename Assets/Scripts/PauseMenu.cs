@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,11 +14,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject levelPlayer;
 
+    //private GameManager manager; //reference vers le singleton
+
     private LevelSystem levelSyst; //reference vers le singleton
     [SerializeField] private Text levelText;
     public string preTextLevel = "Level ";
     [SerializeField] private Text nextLevelText;
-    public string preTextNextLevel = "Pour le prochain\nniveau : ";
+    public string preTextNextLevel = "For the next level\nyou need (xp) : ";
+    private int xpNeeded;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +30,11 @@ public class PauseMenu : MonoBehaviour
         imageMiniMap.gameObject.SetActive(false);
         levelPlayer.gameObject.SetActive(false);
 
+        //manager = GameManager.instance; //cache le gameManager
         levelText.text = preTextLevel;
         nextLevelText.text = preTextNextLevel;
-
-        levelSyst = LevelSystem.instance;
+        
+        levelSyst = LevelSystem.instance; //cache le levelsystem
 
         Time.timeScale = 1;
     }
@@ -50,9 +55,11 @@ public class PauseMenu : MonoBehaviour
 
     public void OnLevelPlayer()
     {
-        levelPlayer.gameObject.SetActive(true);
+        xpNeeded = levelSyst.GetXpForLvl(levelSyst.currentLevel);
         levelText.text = preTextLevel + levelSyst.currentLevel;
-        nextLevelText.text = preTextLevel + levelSyst.experience + "/" + levelSyst.maxExp;
+        nextLevelText.text = preTextLevel + xpNeeded.ToString("D5");
+        //manager.AddTextLevel(); //ajoute le texte
+        levelPlayer.gameObject.SetActive(true);
 
         Time.timeScale = 0;
     }

@@ -10,8 +10,8 @@ public class LevelSystem
     public int currentLevel;
     public Action OnLvlUp;
 
-    public int maxExp;
-    public int maxLevel = 99;
+    public int maxExp; //max xp que le joueur peut atteindre
+    public int maxLevel = 99; //max lvl que le joueur peut atteindre
 
     public static LevelSystem instance = null; //singleton
 
@@ -26,7 +26,7 @@ public class LevelSystem
 
     public int GetXpForLvl(int level)
     {
-        if (level > maxLevel)
+        if (level >= maxLevel) //on ne peut pas surpasser le maxLevel, donc on donne 0 xp
             return 0;
 
         int firstPass = 0;

@@ -11,6 +11,6 @@ public class PlayerGold : MonoBehaviour
 
     public void FixedUpdate()
     {
-        goldCountTxt.text = "Gold: " + goldOwned + "$";
+        goldCountTxt.text = "Gold: " + goldOwned + "g";
     }
 }

@@ -9,6 +9,7 @@ TagManager:
   - Quest
   - SaveGameObject
   - SavePlayer
+  - Event
   layers:
   - Default
   - TransparentFX
