@@ -30,6 +30,10 @@ public class BattleManager : MonoBehaviour
 
     public BattleState state; //point vers les states du combat
 
+    //public static BattleManager instance = null; //singleton
+    //public int doWeAddXp = 0;
+    private Player player; //reference vers le singleton
+
     // Start is called before the first frame update
     void Start()
     {
@@ -265,6 +269,16 @@ public class BattleManager : MonoBehaviour
     {
         if (state == BattleState.WON) //si le combat est gagné
         {
+            if (textEvilBoss.oldManCombatBegin == 1) //le texte du old man s'est affiché et c'est bien lui qu'on combat
+            {
+                GameManager.oldManDead = 1; //on met la valeur 1 pour qu'on sache qu'il faut afficher le panel endGame
+                //GameManager.EndGame();
+            }
+            else
+            {
+                //Player.doWeAddXp = 1; //on met la valeur a 1 pour qu'on puisse gagner de l'experience
+                PlayerGoldExpLvl.doWeAddXp = 1; //on met la valeur a 1 pour qu'on puisse gagner de l'experience
+            }
             combatText.text = "You've Defeated Your Enemy!"; //affiche dans le dialogue You've Defeated Your Enemy!
 
             yield return new WaitForSeconds(2f); //attendre 2 secondes

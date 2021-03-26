@@ -9,10 +9,10 @@ public class PlayerLvlUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        level = new LevelSystem(1, OnLvlUp);
+        level = new LevelSystem(1, OnLevelUp);
     }
 
-    public void OnLvlUp()
+    public void OnLevelUp()
     {
         print("Level up!");
     }
@@ -20,6 +20,6 @@ public class PlayerLvlUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

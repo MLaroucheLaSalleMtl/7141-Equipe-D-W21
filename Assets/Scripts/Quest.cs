@@ -10,6 +10,7 @@ public class Quest
     public string questTitle;
     public string questDescription;
     public int goldReward;
+    public int expReward;
 
     public QuestGoal goal;
 

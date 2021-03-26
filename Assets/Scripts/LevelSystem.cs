@@ -7,7 +7,7 @@ using UnityEngine;
 public class LevelSystem
 {
     public int experience;
-    public int currentLevel;
+    public int currentLevel = 0;
     public Action OnLvlUp;
 
     public int maxExp; //max xp que le joueur peut atteindre
@@ -18,10 +18,10 @@ public class LevelSystem
 
     public LevelSystem(int level, Action OnLevUp)
     {
-        maxExp = GetXpForLvl(maxLevel);
         currentLevel = level;
         experience = GetXpForLvl(level);
         OnLvlUp = OnLevUp;
+        maxExp = GetXpForLvl(maxLevel);
     }
 
     public int GetXpForLvl(int level)

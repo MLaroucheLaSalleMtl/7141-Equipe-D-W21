@@ -6,16 +6,20 @@ public class PlayerQuest : MonoBehaviour
 {
     public Quest quest;
 
-    public GameObject questWindown;
-
     public void ItemQuestPickUp() 
     {
-        quest.goal.ItemPickUp();
+        if (quest.isActive)
+        {
+            quest.goal.ItemPickUp();
+        }
     }
 
-    public void BattleWon()
+    public void BattleQuestWon()
     {
-        quest.goal.EnemyDefeated();
+        if (quest.isActive)
+        {
+            quest.goal.EnemyDefeated();
+        }
     }
     public void TurnInQuest()
     {
@@ -23,12 +27,12 @@ public class PlayerQuest : MonoBehaviour
         {
             if (quest.goal.IsReached())
             {
-                PlayerGold.goldOwned += quest.goldReward;
-                //exp here
+                PlayerGoldExpLvl.goldOwned += quest.goldReward;
+                PlayerGoldExpLvl.expOwned += quest.expReward;
                 quest.goal.currentAmount = 0;
                 quest.Finished();
-                questWindown.SetActive(false);
             }
         }
+    
     }
 }

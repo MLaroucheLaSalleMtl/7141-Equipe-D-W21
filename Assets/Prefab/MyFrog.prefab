@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 5450986188624223291}
   - component: {fileID: 5450986188624223290}
   - component: {fileID: 5450986188611531391}
-  - component: {fileID: 5450986188624223269}
-  - component: {fileID: 5450986188624223294}
   - component: {fileID: 5450986188624223295}
   m_Layer: 6
   m_Name: MyFrog
@@ -157,58 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13923d35a34451f4597e9db3c2cb4335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   speed: 300
-  menu_Inventory: {fileID: 0}
   randomEELayer:
     serializedVersion: 2
     m_Bits: 128
---- !u!114 &5450986188624223269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450986188624223268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba8901280d636548bd0ad3cbf3cdc87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  InventoryButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &5450986188624223294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5450986188624223268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2d46b650465e74e87156a77b5e33eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentInterObj: {fileID: 0}
-  currentInterObjScript: {fileID: 0}
-  inventory: {fileID: 5450986188624223269}
 --- !u!114 &5450986188624223295
 MonoBehaviour:
   m_ObjectHideFlags: 0

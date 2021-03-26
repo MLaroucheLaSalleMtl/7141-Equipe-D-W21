@@ -15,7 +15,7 @@ public class Move : MonoBehaviour
     Animator anim;
 
     public LayerMask randomEELayer;
-    private Inventory inventory;
+  
 
 
     // Start is called before the first frame update
@@ -71,7 +71,7 @@ public class Move : MonoBehaviour
         if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEELayer) != null)
         {
             //On ne veut pas qu'à chaque tuile mauve foncé la grenouille rencontre un ennemi. Seulement une fois de temps en temps
-            if (Random.Range(1, 7001) <= 10)
+            if (Random.Range(1, 3001) <= 10)
             {
                 Debug.Log("Encountered an enemy");
                 Debug.Log(randomNumb);

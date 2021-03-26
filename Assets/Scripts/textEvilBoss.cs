@@ -10,6 +10,8 @@ public class textEvilBoss : MonoBehaviour
     public Text dialogueText;
     public string dialogue;
     public bool dialogueActive;
+    
+    public static int oldManCombatBegin = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,7 @@ public class textEvilBoss : MonoBehaviour
             }
             else
             {
+                oldManCombatBegin = 1;
                 dialogueBox.SetActive(true);
                 dialogueText.text = dialogue;
                 StartCoroutine(Wait5seconds());
