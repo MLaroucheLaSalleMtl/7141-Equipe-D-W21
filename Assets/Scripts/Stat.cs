@@ -51,7 +51,7 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
         }
     }
 
-    public void OnMana(int manaUP) //fonction qui redonne de la vie *CHANGE*
+    public void OnMana(int manaUP) //fonction qui redonne de la vie 
     {
         currentMana += manaUP; //current hp + healPerTurn
         nbManaPot -= 1;

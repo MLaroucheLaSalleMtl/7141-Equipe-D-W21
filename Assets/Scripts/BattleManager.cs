@@ -30,16 +30,30 @@ public class BattleManager : MonoBehaviour
 
     public BattleState state; //point vers les states du combat
 
+    public PlayerQuest playerQuest;
+
     //public static BattleManager instance = null; //singleton
     //public int doWeAddXp = 0;
-    private Player player; //reference vers le singleton
+    //private Player player; //reference vers le singleton
 
     // Start is called before the first frame update
     void Start()
     {
+        playerQuest = GameObject.Find("--PlayerQuestManager--").GetComponent<PlayerQuest>(); //Enlever pour test
+        
         blankImage.gameObject.SetActive(true);
         state = BattleState.START; //declare que le state == START
         StartCoroutine(SetupBattle()); //appelle la fonction SetupBattle et appelle StartCoroutine
+    }
+
+    void Update()
+    {
+        playerStat.characterLevel = PlayerGoldExpLvl.lvlPlayer;
+
+        if (PlayerGoldExpLvl.aLvlUp == 1)
+        {
+            AddStat();
+        }
     }
 
     IEnumerator SetupBattle() //fonction qui va principalement importer les stats prefab du joueur et de l'enemy
@@ -274,14 +288,29 @@ public class BattleManager : MonoBehaviour
                 GameManager.oldManDead = 1; //on met la valeur 1 pour qu'on sache qu'il faut afficher le panel endGame
                 //GameManager.EndGame();
             }
-            else
-            {
-                //Player.doWeAddXp = 1; //on met la valeur a 1 pour qu'on puisse gagner de l'experience
-                PlayerGoldExpLvl.doWeAddXp = 1; //on met la valeur a 1 pour qu'on puisse gagner de l'experience
-            }
+            
+            AddExp();
+            
             combatText.text = "You've Defeated Your Enemy!"; //affiche dans le dialogue You've Defeated Your Enemy!
 
             yield return new WaitForSeconds(2f); //attendre 2 secondes
+
+            Scene scene = SceneManager.GetActiveScene();
+
+            playerQuest.BattleQuestWon();
+
+            if (scene.name == "Scene Combat Goblin")
+            {
+                playerQuest.BattleGoblinWon();
+            }
+
+            if (scene.name == "Scene Combat SlimeBlue" ||
+                scene.name == "Scene Combat SlimeRed" ||
+                scene.name == "Scene Combat SlimeYellow" ||
+                scene.name == "Scene Combat SlimeSpecial")
+            {
+                playerQuest.BattleSlimeWon();
+            }
 
             SceneManager.LoadScene("Scene Principale"); //change de scene pour la scene principale
         }
@@ -378,5 +407,25 @@ public class BattleManager : MonoBehaviour
         }
 
         Flee();
+    }
+
+    public void AddExp() 
+    {
+        PlayerGoldExpLvl.expOwned += 300;
+    }
+
+    public void AddStat()
+    {
+        //On regarde le niveau du joueur et cela va influencer les stats pour les attaques, maxHp et maxMana
+        playerStat.basicDamage += (int)(playerStat.basicDamage * 0.1 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.spellMudThrowDmg += (int)(playerStat.spellMudThrowDmg * 0.1 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.spellVenemousSpitDmg += (int)(playerStat.spellVenemousSpitDmg * 0.1 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.spellWaterballDmg += (int)(playerStat.spellWaterballDmg * 0.1 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.maxHp += (int)(playerStat.maxHp * 0.01 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.currentHp += (int)(playerStat.currentHp * 0.01 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.maxMana += (int)(playerStat.maxMana * 0.01 * PlayerGoldExpLvl.lvlPlayer);
+        playerStat.currentMana += (int)(playerStat.currentMana * 0.01 * PlayerGoldExpLvl.lvlPlayer);
+
+        PlayerGoldExpLvl.aLvlUp = 0;
     }
 }

@@ -10,12 +10,6 @@ public class Sign : MonoBehaviour
     public string dialogue;
     public bool dialogueActive;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -51,6 +45,4 @@ public class Sign : MonoBehaviour
             dialogueBox.SetActive(false);
         }
     }
-
-
 }

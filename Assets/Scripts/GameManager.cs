@@ -8,8 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     private PauseMenu pauseMenu; //reference vers le singleton
-    private LevelSystem levelSyst; //reference vers le singleton
-    private Level level; //reference vers le singleton
+    //private LevelSystem levelSyst; //reference vers le singleton
+    //private Level level; //reference vers le singleton
 
     //[SerializeField] private Text levelText;
     //public string preTextLevel = "Level ";
@@ -17,24 +17,68 @@ public class GameManager : MonoBehaviour
     //public string preTextNextLevel = "For the next level\nyou need (xp) : ";
     //private int xpNeeded;
     
-    public GameObject endGame;
+    public GameObject caveIsVisible;
+    
+    public GameObject endGameStory;
+    public GameObject endGameCredits;
     public static int oldManDead = 0;
+    public int whichPanelEndGame = 0;
+
+    public GameObject chestOpenAppear;
+    public GameObject chestClosedDisappear;
 
     //public void ShowLvlPlayer()
     //{
     //    pauseMenu.levelPlayer.gameObject.SetActive(true);
     //}
 
-    public void EndGame()
+    public void ChestOpenAppear()
     {
-        endGame.gameObject.SetActive(true);
-        StartCoroutine(Wait15seconds());
+        chestClosedDisappear.gameObject.SetActive(false);
+        chestOpenAppear.gameObject.SetActive(true);
     }
 
-    IEnumerator Wait15seconds()
+    public void CaveIsVisible()
     {
-        yield return new WaitForSeconds(15);
-        Application.Quit(); //Quit l'application
+        caveIsVisible.gameObject.SetActive(true);
+    }
+
+
+    public void EndGameStory()
+    {
+        endGameStory.gameObject.SetActive(true);
+        StartCoroutine(WaitXseconds(15));
+    }
+
+    public void EndGameCredits()
+    {
+        endGameStory.gameObject.SetActive(false);
+        endGameCredits.gameObject.SetActive(true);
+        whichPanelEndGame = 1;
+        StartCoroutine(WaitXseconds(7));
+    }
+
+    IEnumerator WaitXseconds(int seconds)
+    {
+        if (whichPanelEndGame == 0)
+        {
+            yield return new WaitForSeconds(seconds);
+            EndGameCredits();
+        }
+        else
+        {
+            yield return new WaitForSeconds(seconds);
+            Application.Quit(); //Quit l'application
+        }
+    }
+
+    IEnumerator Wait4seconds(int seconds)
+    {
+        if (textChest.isTheChestOpen != 0)
+        {
+            yield return new WaitForSeconds(seconds);
+            ChestOpenAppear();
+        }
     }
 
     private void Awake() //pour pouvoir utiliser Hose
@@ -54,10 +98,17 @@ public class GameManager : MonoBehaviour
         //levelText.text = preTextLevel;
         //nextLevelText.text = preTextNextLevel;
 
-        levelSyst = LevelSystem.instance; //cache le levelsystem
-        level = Level.instance; //cache le level
+        //levelSyst = LevelSystem.instance; //cache le levelsystem
+        //level = Level.instance; //cache le level
         pauseMenu = PauseMenu.instance; //cache le gameManager
-        endGame.gameObject.SetActive(false);
+
+        caveIsVisible.gameObject.SetActive(false);
+        
+        endGameStory.gameObject.SetActive(false);
+        endGameCredits.gameObject.SetActive(false);
+
+        chestClosedDisappear.gameObject.SetActive(true);
+        chestOpenAppear.gameObject.SetActive(false);
     }
 
     //public void AddTextLevel()
@@ -76,10 +127,20 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //AddTextLevel();
-        
-        if (oldManDead == 1)
+
+        if (textChest.isTheChestOpen != 0)
         {
-            EndGame();
+            StartCoroutine(Wait4seconds(4));
+        }
+
+        if (oldManDead == 1)    //si on a vaincu le evil boss, le paneau de fin du jeu s'affiche
+        {
+            EndGameStory();
+        }
+
+        if (textOldManHouse.firstTime == 1)     //après avoir parlé avec le ptit vieux dans la maison, la grotte est maintenant visible/on peut y aller
+        {
+            CaveIsVisible();
         }
     }
 }

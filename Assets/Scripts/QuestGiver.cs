@@ -16,9 +16,12 @@ public class QuestGiver : MonoBehaviour
     public Text txtGoldReward;
     public Text txtExpReward;
 
+    public bool canInteract;
+
     void Start()
     {
         playerQuest = GameObject.Find("--PlayerQuestManager--").GetComponent<PlayerQuest>(); //important
+        
         questWindow.SetActive(false);
 
         if (playerQuest.quest.questTitle == quest.questTitle)
@@ -26,6 +29,15 @@ public class QuestGiver : MonoBehaviour
             quest.isActive = true;
         }
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && canInteract == true)
+        {
+            OpenQuestWindow();
+        }
+    }
+
     public void OpenQuestWindow() 
     {
         questWindow.SetActive(true);
@@ -45,8 +57,35 @@ public class QuestGiver : MonoBehaviour
         }
     }
 
+    public void BtnTurnInQuest()
+    {
+        if (quest.questTitle == playerQuest.quest.questTitle)
+        { 
+        playerQuest.TurnInQuest();
+        questWindow.SetActive(false);
+        }
+    }
+
     public void CloseQuestWindow()
     {
         questWindow.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            canInteract = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("Player"))
+        {
+            canInteract = false;
+            questWindow.SetActive(false);
+        }
     }
 }

@@ -7,20 +7,62 @@ public class textChest : MonoBehaviour
 {
     public GameObject dialogueBox;
     public Text dialogueText;
-    public string dialogueBefore;
-    public string dialogueAfter;
+    public string dialogueChestClosed;
+    public string dialogueChestOpen1;
+    public string dialogueChestOpen2;
+    public static int isTheChestOpen = 0;
     public bool dialogueActive;
-    int isTheChestOpen = 0;
+
+    GameManager manager;
+
+    //public GameObject chestOpenAppear;
+    //public GameObject chestClosedDisappear;
+
+    //public void ChestOpenAppear()
+    //{
+    //    chestClosedDisappear.gameObject.SetActive(false);
+    //    chestOpenAppear.gameObject.SetActive(true);
+    //}
 
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameManager.instance; //cache le gameManager
 
+        //chestClosedDisappear.gameObject.SetActive(true);
+        //chestOpenAppear.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if (isTheChestOpen == 1 && dialogueActive)
+        //{
+        //    if (dialogueBox.activeInHierarchy)
+        //    {
+        //        dialogueBox.SetActive(false);
+        //    }
+        //    else
+        //    {
+        //        dialogueBox.SetActive(true);
+        //        dialogueText.text = dialogueBefore;
+        //        isTheChestOpen = 2;
+        //    }
+        //}
+        //
+        //else if (Input.GetKeyDown(KeyCode.Space) && dialogueActive && isTheChestOpen==2)
+        //{
+        //    if (dialogueBox.activeInHierarchy)
+        //    {
+        //        dialogueBox.SetActive(false);
+        //    }
+        //    else
+        //    {
+        //        dialogueBox.SetActive(true);
+        //        dialogueText.text = dialogueAfter;
+        //    }
+        //}
+        
         if (Input.GetKeyDown(KeyCode.Space) && dialogueActive)
         {
         
@@ -30,22 +72,27 @@ public class textChest : MonoBehaviour
             }
             else
             {
+                dialogueBox.SetActive(true);
                 if (isTheChestOpen == 0)
                 {
-                    dialogueBox.SetActive(true);
-                    dialogueText.text = dialogueBefore;
+                    dialogueText.text = dialogueChestClosed;
                     isTheChestOpen = 1;
+                }
+                else if (isTheChestOpen == 1)
+                {
+                    dialogueText.text = dialogueChestOpen1;
+                    isTheChestOpen = 2;
+                    PlayerGoldExpLvl.goldOwned += 10;
                 }
                 else
                 {
-                    dialogueBox.SetActive(true);
-                    dialogueText.text = dialogueAfter;
+                    dialogueText.text = dialogueChestOpen2;
                 }
             }
         }
     }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {

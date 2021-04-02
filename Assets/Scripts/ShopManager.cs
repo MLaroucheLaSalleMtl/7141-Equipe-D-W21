@@ -11,10 +11,12 @@ public class ShopManager : MonoBehaviour
     public int[,] shopItems = new int[5,5];
     public float coins;
     public Text CoinsTXT;
+    public PlayerGoldExpLvl gold;
+    public Stat items;
     // Start is called before the first frame update
     void Start()
     {
-        CoinsTXT.text = "Coins: " + coins.ToString();
+        CoinsTXT.text = "Coins: " + PlayerGoldExpLvl.goldOwned.ToString();
 
         //Item ID
         shopItems[1, 1]=1;
@@ -38,13 +40,14 @@ public class ShopManager : MonoBehaviour
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
 
-        if(coins >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
+        if (PlayerGoldExpLvl.goldOwned >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
-            coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+            PlayerGoldExpLvl.goldOwned -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
-            CoinsTXT.text = "Coins :" + coins.ToString();
+          
+            CoinsTXT.text = "Coins :" + PlayerGoldExpLvl.goldOwned.ToString();
             ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
-
+            
         }
     }
 }

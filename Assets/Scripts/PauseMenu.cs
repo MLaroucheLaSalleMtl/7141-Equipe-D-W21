@@ -30,7 +30,7 @@ public class PauseMenu : MonoBehaviour
 
     public static PauseMenu instance = null;
     private GameManager manager; //reference vers le singleton
-    private Player player; //reference vers le singleton
+    //private Player player; //reference vers le singleton
 
     //private LevelSystem levelSyst; //reference vers le singleton
     //[SerializeField] private Text levelText;
@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
         //nextLevelText.text = preTextNextLevel;
         //
         //levelSyst = LevelSystem.instance; //cache le levelsystem
-        player = Player.instance; //cache le player
+        //player = Player.instance; //cache le player
         //levelText.text = preTextLevel;
 
         Time.timeScale = 1;

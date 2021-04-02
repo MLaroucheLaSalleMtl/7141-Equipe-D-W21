@@ -5,8 +5,14 @@ using UnityEngine;
 public class InteractionObject : MonoBehaviour
 {
     public bool inventory;
-  public void DoInteraction()
+    public void DoInteraction()
     {
         gameObject.SetActive(false);
     }
+
+    
+
+
+
+
 }
