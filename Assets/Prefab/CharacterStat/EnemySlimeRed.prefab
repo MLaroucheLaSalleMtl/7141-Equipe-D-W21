@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3572133021906478233}
   - component: {fileID: 5220653193549982803}
   m_Layer: 0
-  m_Name: EnemySlime3
+  m_Name: EnemySlimeRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Red Slime
   characterLevel: 15
-  basicDamage: 35
+  basicDamage: 30
   spellVenemousSpitDmg: 0
   spellVenemousSpitMana: 0
   spellWaterballDmg: 0
@@ -54,10 +54,12 @@ MonoBehaviour:
   spellMudThrowDmg: 0
   spellMudThrowMana: 0
   healthPotionPoints: 0
+  nbHealthPot: 0
   manaPotionPoints: 0
+  nbManaPot: 0
   fireFlowerDamage: 0
-  maxHp: 50
-  currentHp: 50
+  maxHp: 140
+  currentHp: 140
   maxMana: 100
   currentMana: 100
 --- !u!212 &5220653193549982803

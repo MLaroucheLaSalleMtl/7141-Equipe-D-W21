@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerGoldExpLvl : MonoBehaviour
 {
-    public static int goldOwned = 1000;
+    public static int goldOwned = 0;
     public static int expOwned = 0;
     public static int expTotalToLevel = 100;
     public static int expNeeded = 0;
@@ -22,7 +22,7 @@ public class PlayerGoldExpLvl : MonoBehaviour
 
         expNeeded = expTotalToLevel - expOwned;
 
-        if (expOwned >= expTotalToLevel)
+        if (expOwned >= expTotalToLevel && lvlPlayer < 100)
         {
             expOwned -= expTotalToLevel;
             lvlPlayer += 1;

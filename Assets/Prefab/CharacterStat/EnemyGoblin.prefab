@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Goblin
   characterLevel: 50
-  basicDamage: 40
+  basicDamage: 45
   spellVenemousSpitDmg: 0
   spellVenemousSpitMana: 0
   spellWaterballDmg: 0
@@ -54,10 +54,12 @@ MonoBehaviour:
   spellMudThrowDmg: 0
   spellMudThrowMana: 0
   healthPotionPoints: 0
+  nbHealthPot: 0
   manaPotionPoints: 0
+  nbManaPot: 0
   fireFlowerDamage: 0
-  maxHp: 100
-  currentHp: 100
+  maxHp: 300
+  currentHp: 300
   maxMana: 100
   currentMana: 100
 --- !u!212 &5220653193549982803

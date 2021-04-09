@@ -16,9 +16,9 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public int spellMudThrowDmg;
     public int spellMudThrowMana;
     public int healthPotionPoints;
-    public int nbHealthPot;
+    public int nbHealthPot=0;
     public int manaPotionPoints;
-    public int nbManaPot;
+    public int nbManaPot=0;
     public int fireFlowerDamage;
 
     public int maxHp; //variable int public pour le maximum hp

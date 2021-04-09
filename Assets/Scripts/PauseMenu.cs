@@ -25,19 +25,11 @@ public class PauseMenu : MonoBehaviour
 
     public Text levelText;
     public Text expNeededText;
-    //public Text preTextLevel;
-    //public string preTextLevel = "Level ";
+    
 
     public static PauseMenu instance = null;
     private GameManager manager; //reference vers le singleton
-    //private Player player; //reference vers le singleton
-
-    //private LevelSystem levelSyst; //reference vers le singleton
-    //[SerializeField] private Text levelText;
-    //public string preTextLevel = "Level ";
-    //[SerializeField] private Text nextLevelText;
-    //public string preTextNextLevel = "For the next level\nyou need (xp) : ";
-    //private int xpNeeded;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -50,21 +42,15 @@ public class PauseMenu : MonoBehaviour
         followQuestWindow.gameObject.SetActive(false);
 
         manager = GameManager.instance; //cache le gameManager
-        //levelText.text = preTextLevel;
-        //nextLevelText.text = preTextNextLevel;
-        //
-        //levelSyst = LevelSystem.instance; //cache le levelsystem
-        //player = Player.instance; //cache le player
-        //levelText.text = preTextLevel;
 
         Time.timeScale = 1;
     }
 
     public void OnMiniMap()
     {
-            imageMiniMap.gameObject.SetActive(true);
+        imageMiniMap.gameObject.SetActive(true);
 
-            Time.timeScale = 0;
+        Time.timeScale = 0;
     }
 
     public void OnMiniMapClose() 
@@ -77,18 +63,9 @@ public class PauseMenu : MonoBehaviour
     public void OnLevelPlayer()
     {
         levelPlayer.gameObject.SetActive(true);
-        //xpNeeded = levelSyst.GetXpForLvl(LevelSystem.currentLevel);
-        //levelText.text = preTextLevel + LevelSystem.currentLevel;
-        //nextLevelText.text = preTextLevel + xpNeeded.ToString("D5");
-        //manager.ShowLvlPlayer();
-        //manager.AddTextLevel(); //ajoute le texte
-        
-        //levelText.text = preTextLevel + player.level.currentLevel.ToString();
+ 
         levelText.text = "Level " + PlayerGoldExpLvl.lvlPlayer;
         expNeededText.text = PlayerGoldExpLvl.expNeeded + " exp";
-        //levelText.text = "Level " + Player.level.currentLevel.ToString();
-        //int playerLvl = player.level.currentLevel + 1;
-        //levelText.text = preTextLevel + playerLvl.ToString();
 
         Time.timeScale = 0;
     }
@@ -124,6 +101,16 @@ public class PauseMenu : MonoBehaviour
         txtOnQuestExpReward.text = playerQuest.quest.expReward.ToString();
         txtOnQuestGoal.text = "Goal: " + playerQuest.quest.goal.currentAmount.ToString() + " / " + playerQuest.quest.goal.requiredAmount.ToString();
         Time.timeScale = 0;
+    }
+
+    public void OnCancelQuest() 
+    {
+        playerQuest.quest.goal.currentAmount = 0;
+        playerQuest.quest.isActive = false;
+
+        followQuestWindow.gameObject.SetActive(false);
+
+        Time.timeScale = 1;
     }
 
     public void OnExitFollowQuest()

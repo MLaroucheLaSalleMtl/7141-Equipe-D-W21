@@ -47,7 +47,7 @@ public class QuestGiver : MonoBehaviour
         txtExpReward.text = quest.expReward.ToString();
     }
 
-    public void AcceptQuest() 
+    public void BtnAcceptQuest() 
     {
         if (playerQuest.quest.isActive == false)
         {
@@ -59,14 +59,14 @@ public class QuestGiver : MonoBehaviour
 
     public void BtnTurnInQuest()
     {
-        if (quest.questTitle == playerQuest.quest.questTitle)
+        if (quest.questTitle == playerQuest.quest.questTitle && quest.goal.IsReached())
         { 
         playerQuest.TurnInQuest();
         questWindow.SetActive(false);
         }
     }
 
-    public void CloseQuestWindow()
+    public void BtnCloseQuestWindow()
     {
         questWindow.SetActive(false);
     }

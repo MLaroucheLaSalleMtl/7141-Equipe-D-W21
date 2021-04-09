@@ -12,25 +12,39 @@ public class textChest : MonoBehaviour
     public string dialogueChestOpen2;
     public static int isTheChestOpen = 0;
     public bool dialogueActive;
+    
+    //public int goldCoin;
+    //public int healthPotion;
+    //public int manaPotion;
 
     GameManager manager;
 
-    //public GameObject chestOpenAppear;
-    //public GameObject chestClosedDisappear;
+    public GameObject chestOpenAppear;
+    public GameObject chestClosedDisappear;
 
-    //public void ChestOpenAppear()
-    //{
-    //    chestClosedDisappear.gameObject.SetActive(false);
-    //    chestOpenAppear.gameObject.SetActive(true);
-    //}
+
+    public void ChestOpenAppear()
+    {
+        chestClosedDisappear.gameObject.SetActive(false);
+        chestOpenAppear.gameObject.SetActive(true);
+    }
+
+    IEnumerator Wait4seconds(int seconds)
+    {
+        if (isTheChestOpen != 0)
+        {
+            yield return new WaitForSeconds(seconds);
+            ChestOpenAppear();
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         manager = GameManager.instance; //cache le gameManager
 
-        //chestClosedDisappear.gameObject.SetActive(true);
-        //chestOpenAppear.gameObject.SetActive(false);
+        chestClosedDisappear.gameObject.SetActive(true);
+        chestOpenAppear.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -62,7 +76,12 @@ public class textChest : MonoBehaviour
         //        dialogueText.text = dialogueAfter;
         //    }
         //}
-        
+
+        if (isTheChestOpen != 0)
+        {
+            StartCoroutine(Wait4seconds(2));
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && dialogueActive)
         {
         
@@ -82,7 +101,8 @@ public class textChest : MonoBehaviour
                 {
                     dialogueText.text = dialogueChestOpen1;
                     isTheChestOpen = 2;
-                    PlayerGoldExpLvl.goldOwned += 10;
+                    PlayerGoldExpLvl.goldOwned += 25;
+                    //PlayerGoldExpLvl.goldOwned += goldCoin;
                 }
                 else
                 {

@@ -13,6 +13,7 @@ public class ShopManager : MonoBehaviour
     public Text CoinsTXT;
     public PlayerGoldExpLvl gold;
     public Stat items;
+    public ButtonInfo button;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,12 +43,16 @@ public class ShopManager : MonoBehaviour
 
         if (PlayerGoldExpLvl.goldOwned >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID])
         {
+            
             PlayerGoldExpLvl.goldOwned -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]++;
-          
+        
+           
             CoinsTXT.text = "Coins :" + PlayerGoldExpLvl.goldOwned.ToString();
             ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
-            
+          
         }
     }
+
+    
 }

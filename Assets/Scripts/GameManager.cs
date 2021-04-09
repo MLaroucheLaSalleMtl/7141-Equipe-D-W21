@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     private PauseMenu pauseMenu; //reference vers le singleton
+    
     //private LevelSystem levelSyst; //reference vers le singleton
     //private Level level; //reference vers le singleton
 
@@ -24,19 +25,19 @@ public class GameManager : MonoBehaviour
     public static int oldManDead = 0;
     public int whichPanelEndGame = 0;
 
-    public GameObject chestOpenAppear;
-    public GameObject chestClosedDisappear;
+    //public GameObject chestOpenAppear;
+    //public GameObject chestClosedDisappear;
 
     //public void ShowLvlPlayer()
     //{
     //    pauseMenu.levelPlayer.gameObject.SetActive(true);
     //}
 
-    public void ChestOpenAppear()
-    {
-        chestClosedDisappear.gameObject.SetActive(false);
-        chestOpenAppear.gameObject.SetActive(true);
-    }
+    //public void ChestOpenAppear()
+    //{
+    //    chestClosedDisappear.gameObject.SetActive(false);
+    //    chestOpenAppear.gameObject.SetActive(true);
+    //}
 
     public void CaveIsVisible()
     {
@@ -72,14 +73,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator Wait4seconds(int seconds)
-    {
-        if (textChest.isTheChestOpen != 0)
-        {
-            yield return new WaitForSeconds(seconds);
-            ChestOpenAppear();
-        }
-    }
+    //IEnumerator Wait4seconds(int seconds)
+    //{
+    //    if (textChest.isTheChestOpen != 0)
+    //    {
+    //        yield return new WaitForSeconds(seconds);
+    //        ChestOpenAppear();
+    //    }
+    //}
 
     private void Awake() //pour pouvoir utiliser Hose
     {
@@ -107,8 +108,8 @@ public class GameManager : MonoBehaviour
         endGameStory.gameObject.SetActive(false);
         endGameCredits.gameObject.SetActive(false);
 
-        chestClosedDisappear.gameObject.SetActive(true);
-        chestOpenAppear.gameObject.SetActive(false);
+        //chestClosedDisappear.gameObject.SetActive(true);
+        //chestOpenAppear.gameObject.SetActive(false);
     }
 
     //public void AddTextLevel()
@@ -128,10 +129,10 @@ public class GameManager : MonoBehaviour
     {
         //AddTextLevel();
 
-        if (textChest.isTheChestOpen != 0)
-        {
-            StartCoroutine(Wait4seconds(4));
-        }
+        //if (textChest.isTheChestOpen != 0)
+        //{
+        //    StartCoroutine(Wait4seconds(4));
+        //}
 
         if (oldManDead == 1)    //si on a vaincu le evil boss, le paneau de fin du jeu s'affiche
         {

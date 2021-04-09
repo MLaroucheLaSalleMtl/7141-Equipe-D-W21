@@ -30,6 +30,54 @@ public class QuestGoal
         currentAmount++;
     }
 
+    public void PickUpApple()
+    {
+        if (questType == QuestType.GatheringApple)
+            currentAmount++;
+    }
+
+    public void PickUpStrawberry()
+    {
+        if (questType == QuestType.GatheringStrawberry)
+            currentAmount++;
+    }
+
+    public void PickUpBlueberry()
+    {
+        if (questType == QuestType.GatheringBlueberry)
+            currentAmount++;
+    }
+
+    public void PickUpFlower()
+    {
+        if (questType == QuestType.GatheringFlower)
+            currentAmount++;
+    }
+
+    public void PickUpTool()
+    {
+        if (questType == QuestType.GatheringTool)
+            currentAmount++;
+    }
+
+    public void PickUpWood()
+    {
+        if (questType == QuestType.GatheringWood)
+            currentAmount++;
+    }
+
+    public void PickUpStone()
+    {
+        if (questType == QuestType.GatheringStone)
+            currentAmount++;
+    }
+
+    public void PickUpMetal()
+    {
+        if (questType == QuestType.GatheringMetal)
+            currentAmount++;
+    }
+
     public void GoblinDefeated()
     {
         if (questType == QuestType.BattleGoblin)
@@ -43,4 +91,16 @@ public class QuestGoal
     }
 }
 
-public enum QuestType { Battle, Gathering , GatheringMushroom , BattleGoblin , BattleSlime}
+public enum QuestType { Battle, 
+                        Gathering , 
+                        GatheringMushroom , 
+                        GatheringApple ,
+                        GatheringStrawberry ,
+                        GatheringBlueberry ,
+                        GatheringFlower ,
+                        GatheringTool ,
+                        GatheringWood ,
+                        GatheringStone ,
+                        GatheringMetal ,
+                        BattleGoblin , 
+                        BattleSlime}

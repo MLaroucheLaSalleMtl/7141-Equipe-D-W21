@@ -10,6 +10,7 @@ public class ButtonInfo : MonoBehaviour
     public Text QuantityTxt;
     public GameObject ShopManager;
 
+
     void Update()
     {
         PirceTxt.text = "Price: $" + ShopManager.GetComponent<ShopManager>().shopItems[2, ItemID].ToString();

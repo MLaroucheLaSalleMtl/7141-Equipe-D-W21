@@ -22,6 +22,70 @@ public class PlayerQuest : MonoBehaviour
         }
     }
 
+    public void StrawberryPickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpStrawberry();
+        }
+    }
+
+    public void ApplePickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpApple();
+        }
+    }
+
+    public void BlueberryPickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpBlueberry();
+        }
+    }
+
+    public void FlowerPickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpFlower();
+        }
+    }
+
+    public void ToolPickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpTool();
+        }
+    }
+
+    public void WoodPickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpWood();
+        }
+    }
+
+    public void StonePickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpStone();
+        }
+    }
+
+    public void MetalPickUp()
+    {
+        if (quest.isActive)
+        {
+            quest.goal.PickUpMetal();
+        }
+    }
+
     public void BattleQuestWon()
     {
         if (quest.isActive)

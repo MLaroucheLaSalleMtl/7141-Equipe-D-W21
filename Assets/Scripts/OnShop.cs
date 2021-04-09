@@ -44,6 +44,7 @@ public class OnShop : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             shopOn = false;
+            shopBox.SetActive(false);
         }
     }
 
