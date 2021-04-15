@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Code de base écrit par Kevin (Script : Sign)
+// Modif apporté par Marie-Lee
+
 public class textOldManHouse : MonoBehaviour
 {
+    //Fait Kevin
     public GameObject dialogueBox;
     public Text dialogueText;
+    public bool dialogueActive;
+
+    //Fait par Marie-Lee
+    public string dialogueFirstTime;
+    public string dialogueNotFirstTime;
+    public static int firstTime = 0;
     //public string dialogueDontSteal;
     //public string dialogueFirstTimeAction;
     //public string dialogueNotFirstTimeAction;
-    public string dialogueFirstTime;
-    public string dialogueNotFirstTime;
-    public bool dialogueActive;
-    public static int firstTime = 0;
     //public int textDontStealShowing = 0;
 
     // Start is called before the first frame update
@@ -32,9 +38,11 @@ public class textOldManHouse : MonoBehaviour
             {
                 dialogueBox.SetActive(false);
             }
+            
+            //Fait par Marie-Lee
             else
             {
-                if (firstTime == 0)
+                if (firstTime == 0) //première fois qu'on parle au vieillard dans la maison
                 {
                     dialogueBox.SetActive(true);
                     dialogueText.text = dialogueFirstTime;
@@ -48,7 +56,7 @@ public class textOldManHouse : MonoBehaviour
                     //    textDontStealShowing = 0;
                     //}
                 }
-                else
+                else  //si ce n'est pas la première fois qu'on lui parle, le texte n'est plus le même qu'avant
                 {
                     dialogueBox.SetActive(true);
                     dialogueText.text = dialogueNotFirstTime;
@@ -65,6 +73,7 @@ public class textOldManHouse : MonoBehaviour
         }
     }
 
+    //Fait par Kevin
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -73,6 +82,7 @@ public class textOldManHouse : MonoBehaviour
         }
     }
 
+    //Fait par Kevin
     private void OnTriggerExit2D(Collider2D collision)
     {
 

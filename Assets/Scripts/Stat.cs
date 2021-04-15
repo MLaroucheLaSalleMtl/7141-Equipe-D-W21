@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Ce script sert a gerer les stats des entity pour le combat
+/// Script fait par Emile Deslauriers
+/// Source : Brackeys, Youtube, Turn-Based Combat in Unity, 24 nov 2019, 6:15 min
+/// Lien youtube : https://www.youtube.com/watch?v=_1pz_ohupPs&ab_channel=Brackeys
+/// </summary>
+
 public class Stat : MonoBehaviour //script dans le but d'attribue des stats a des personnages
 {
     public string characterName; //variable string public pour le Nom
@@ -9,17 +16,15 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
 
     public int basicDamage; //variable int public pour le nombre de damage par tour
 
-    public int spellVenemousSpitDmg;
-    public int spellVenemousSpitMana;
-    public int spellWaterballDmg;
-    public int spellWaterballMana;
-    public int spellMudThrowDmg;
-    public int spellMudThrowMana;
-    public int healthPotionPoints;
-    public int nbHealthPot=0;
-    public int manaPotionPoints;
-    public int nbManaPot=0;
-    public int fireFlowerDamage;
+    public int spellVenemousSpitDmg; //variable int public pour le dmg de Venemous Spit
+    public int spellVenemousSpitMana; //variable int public pour mana de Venemous Spit
+    public int spellWaterballDmg; //variable int public pour le dmg de Water Ball
+    public int spellWaterballMana; //variable int public pour mana de Water Ball
+    public int spellMudThrowDmg; //variable int public pour le dmg de Mud Throw
+    public int spellMudThrowMana; //variable int public pour la mana de Mud Throw
+    public int healthPotionPoints; //variable int public pour le nombre de point de vie
+    public int manaPotionPoints; //variable int public pour le  nombre de point de mana
+    public int fireFlowerDamage; //variable int public pour le dmg de Fire Flower
 
     public int maxHp; //variable int public pour le maximum hp
     public int currentHp; //varriable int public pour le hp actuel
@@ -32,19 +37,19 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
         currentHp -= dmg; //moins de vie sur le damagePerTurn
         if (currentHp <= 0) //si la vie est egal ou en bas de 0 retourn TRUE
         {
-            currentHp = 0;
-            return true;
+            currentHp = 0; //met le current hp a 0
+            return true; //retourne true
         }
-        else //sinon retourne FALSE
+        else //sinon
         {
-            return false;
+            return false; //retourne false
         }
     }
 
     public void OnHeal(int healUP) //fonction qui redonne de la vie
-    {
+    {   
         currentHp += healUP; //current hp + healPerTurn
-        nbHealthPot -= 1;
+        Inventory.healthPotion -= 1;
         if (currentHp > maxHp) //si le current hp va en haut de la vie normale
         {
             currentHp = maxHp; //remet la vie a 100%
@@ -54,7 +59,7 @@ public class Stat : MonoBehaviour //script dans le but d'attribue des stats a de
     public void OnMana(int manaUP) //fonction qui redonne de la vie 
     {
         currentMana += manaUP; //current hp + healPerTurn
-        nbManaPot -= 1;
+        Inventory.manaPotion -= 1;
         if (currentMana > maxMana) //si le current hp va en haut de la vie normale
         {
             currentMana = maxMana; //remet la vie a 100%

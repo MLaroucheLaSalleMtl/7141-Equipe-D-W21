@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+// Code de mouvement repris des éléments vu du cours 
+// Auteur principale : Kevin De Nobrega-Rodrigues
+// Marie-Lee Potvin a apporté des modifications pour inclure la fonction : CheckForEncounters()
+
 public class Move : MonoBehaviour
 {
-    //Code de mouvement repris des éléments vu du cours 
     public GameObject player;
 
     Rigidbody2D rigid;
@@ -15,6 +18,8 @@ public class Move : MonoBehaviour
     Animator anim;
 
     public LayerMask randomEELayer;
+    public LayerMask randomEESlimeLayer;
+    public LayerMask randomEEGoblinLayer;
   
 
 
@@ -45,10 +50,11 @@ public class Move : MonoBehaviour
         pos += (dir.normalized * speed) * Time.fixedDeltaTime;
         rigid.velocity = pos;
 
+        SavePlayerPosition();
+
+        //Fait Marie-Lee
         if (didItMove != pos)
         { CheckForEncounters(); }
-
-        SavePlayerPosition();
     }
 
     // Update is called once per frame
@@ -64,14 +70,15 @@ public class Move : MonoBehaviour
         Movement();
     }
 
+    //Random Encounters fait par Marie-Lee Potvin
     private void CheckForEncounters()
     {
         int randomNumb = Random.Range(1, 6);
 
         if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEELayer) != null)
         {
-            //On ne veut pas qu'à chaque tuile mauve foncé la grenouille rencontre un ennemi. Seulement une fois de temps en temps
-            if (Random.Range(1, 3001) <= 10)
+            //On ne veut pas qu'à chaque tuile gris foncé la grenouille rencontre un ennemi. Seulement une fois de temps en temps
+            if (Random.Range(1, 2500) <= 10)
             {
                 Debug.Log("Encountered an enemy");
                 Debug.Log(randomNumb);
@@ -96,6 +103,49 @@ public class Move : MonoBehaviour
                 }
             }
         }
+
+        else if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEESlimeLayer) != null)
+        {
+            //On ne veut pas qu'à chaque tuile jaune foncé la grenouille rencontre un slime. Seulement une fois de temps en temps
+            if (Random.Range(1, 500) <= 10)
+            {
+                Debug.Log("Encountered an enemy");
+                Debug.Log(randomNumb);
+
+                switch (randomNumb)
+                {
+                    case 1:
+                        SceneManager.LoadScene("Scene Combat SlimeBlue");
+                        break;
+                    case 2:
+                        SceneManager.LoadScene("Scene Combat SlimeYellow");
+                        break;
+                    case 3:
+                        SceneManager.LoadScene("Scene Combat SlimeRed");
+                        break;
+                    case 4:
+                        SceneManager.LoadScene("Scene Combat SlimeSpecial");
+                        break;
+                }
+            }
+        }
+
+        else if (Physics2D.OverlapCircle(transform.position, 0.2f, randomEEGoblinLayer) != null)
+        {
+            //On ne veut pas qu'à chaque tuile mauve foncé la grenouille rencontre un goblin. Seulement une fois de temps en temps
+            if (Random.Range(1, 200) <= 10)
+            {
+                Debug.Log("Encountered an enemy");
+                Debug.Log(randomNumb);
+
+                switch (randomNumb)
+                {
+                    case 1:
+                        SceneManager.LoadScene("Scene Combat Goblin");
+                        break;
+                }
+            }
+        }
     }
 
     public void SavePlayerPosition() 
@@ -103,7 +153,6 @@ public class Move : MonoBehaviour
         PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
         PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
         PlayerPrefs.SetFloat("PlayerZ", player.transform.position.z);
-
     }
 
     public void ChangeToSavePosition()

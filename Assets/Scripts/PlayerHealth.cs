@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Ce script sert a gerer le slider du Player Health
+/// Script fait par Emile Deslauriers
+/// </summary>
+
 public class PlayerHealth : MonoBehaviour
 {
     public Slider sliderPlayerHP; //point vers le slider de la vie du player

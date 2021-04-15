@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Ce script sert a pickup l'objet Wood pour les quests
+/// Script fait par Emile Deslauriers basé sur le script PickUpApple
+/// </summary>
+
 public class PickUpWood : MonoBehaviour
 {
     public PlayerQuest playerQuest;

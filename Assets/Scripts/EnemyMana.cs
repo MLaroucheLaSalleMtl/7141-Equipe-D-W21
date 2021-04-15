@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Ce script sert a gerer le slider du Enemie Mana
+/// Script fait par Emile Deslauriers
+/// </summary>
+
 public class EnemyMana : MonoBehaviour
 {
     public Slider sliderEnemyMana; //point vers le slider de la mana enemy

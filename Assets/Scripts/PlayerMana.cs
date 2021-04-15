@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Ce script sert a gerer le slider du Player Mana
+/// Script fait par Emile Deslauriers
+/// </summary>
+
 public class PlayerMana : MonoBehaviour
 {
     public Slider sliderPlayerMana; //point vers le slider de la mana du player

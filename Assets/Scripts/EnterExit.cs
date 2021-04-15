@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Fait par Emile
+
 public class EnterExit : MonoBehaviour
 {
     [SerializeField] private GameObject teleport; //Ou teleporter

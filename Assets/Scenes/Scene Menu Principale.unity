@@ -679,14 +679,16 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'How To Play : You''re a frog in a strange world and you must speak to
-    villager to know whats going on ???
+    villagers to know what''s going on ???
 
-    -You''re going to have to battle monster/people
 
-    -Complete
-    quest
 
-    -Acquire items
+    -You''re going to have to battle
+    monsters/people.
+
+    -Complete quests.
+
+    -Acquire items.
 
 '
 --- !u!222 &208419769
@@ -1297,20 +1299,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-Use "W,A,S,D" or Arrow Keys to move around the map
+  m_Text: '-Use "W,A,S,D" or Arrow Keys to move around the map.
 
-    -Use "Space Bar"
-    to interact with the world
+    -Use "Space
+    Bar" to interact with the world.
 
-    -Use "M" to open the mini-map
+    -Use "M" to open the mini-map.
 
-    -Use "L" to
-    open level details
+    -Use
+    "L" to open level details.
 
-    -Use "J" to open journal to see Quest
+    -Use "J" to open journal to see Quest.
 
-    -Use "Escape"
-    to pause the game
+    -Use
+    "Escape" to pause the game.
 
 '
 --- !u!222 &690993283

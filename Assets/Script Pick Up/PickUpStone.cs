@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Ce script sert a pickup l'objet Stone pour les quests
+/// Script fait par Emile Deslauriers basé sur le script PickUpApple
+/// </summary>
+
 public class PickUpStone : MonoBehaviour
 {
     public PlayerQuest playerQuest;
 
     public bool canInteract;
+
     void Start()
     {
-        playerQuest = GameObject.Find("--PlayerQuestManager--").GetComponent<PlayerQuest>(); //important
+        playerQuest = GameObject.Find("--PlayerQuestManager--").GetComponent<PlayerQuest>();
     }
 
     void Update()

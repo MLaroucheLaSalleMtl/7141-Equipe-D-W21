@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Ce script sert a gerer le slider du Enemie Health
+/// Script fait par Emile Deslauriers
+/// </summary>
+
 public class EnemyHealth : MonoBehaviour
 {
     public Slider sliderEnemyHP; //point vers le slider de la vie enemy

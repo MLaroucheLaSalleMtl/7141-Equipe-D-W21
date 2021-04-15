@@ -4,21 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Code de base écrit par Kevin N.-R. (Script : Sign)
+// Modif apporté par Marie-Lee P.
+
 public class textEvilBoss : MonoBehaviour
 {
+    //Fait par Kevin
     public GameObject dialogueBox;
     public Text dialogueText;
     public string dialogue;
     public bool dialogueActive;
     
+    //Fait par Marie-Lee
     public static int oldManCombatBegin = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
+    //Fait par Marie-Lee
     IEnumerator Wait5seconds()
     {
         yield return new WaitForSeconds(5);
@@ -35,6 +40,8 @@ public class textEvilBoss : MonoBehaviour
             {
                 dialogueBox.SetActive(false);
             }
+            
+            //Fait par Marie-Lee
             else
             {
                 oldManCombatBegin = 1;
@@ -45,6 +52,7 @@ public class textEvilBoss : MonoBehaviour
         }
     }
 
+    //Fait par Kevin
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -53,6 +61,7 @@ public class textEvilBoss : MonoBehaviour
         }
     }
 
+    //Fait par Kevin
     private void OnTriggerExit2D(Collider2D collision)
     {
 

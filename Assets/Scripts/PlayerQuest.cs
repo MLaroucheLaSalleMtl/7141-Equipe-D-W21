@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Ce script sert a gerer la quest suivit du joeur avec les PickUp, les Combats et etre capable de TurnIn
+/// Script fait par Emile Deslauriers
+/// </summary>
+
 public class PlayerQuest : MonoBehaviour
 {
-    public Quest quest;
+    public Quest quest; //reference au script Quest
 
-    public void ItemQuestPickUp() 
+    public void ItemQuestPickUp() //fonction pour appeller une fonction dans le script goal si il a une quest d'active
     {
         if (quest.isActive)
         {
@@ -109,16 +114,17 @@ public class PlayerQuest : MonoBehaviour
             quest.goal.SlimeDefeated();
         }
     }
-    public void TurnInQuest()
+
+    public void TurnInQuest() //fonction pour turn in un quest apres l'avoir completer
     {
-        if (quest.isActive)
+        if (quest.isActive) //si la quest est active
         {
-            if (quest.goal.IsReached())
+            if (quest.goal.IsReached()) //si le goal est reached
             {
-                PlayerGoldExpLvl.goldOwned += quest.goldReward;
-                PlayerGoldExpLvl.expOwned += quest.expReward;
-                quest.goal.currentAmount = 0;
-                quest.Finished();
+                PlayerGoldExpLvl.goldOwned += quest.goldReward; //increment le gold du joueur selon le gold reward de la quest completer
+                PlayerGoldExpLvl.expOwned += quest.expReward; //increment le gold du joueur selon le exp reward de la quest completer
+                quest.goal.currentAmount = 0; //remet le current goal amount a 0
+                quest.Finished(); //appel la fonction Finished du script Quest
             }
         }
     }

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Ce script sert a gerer l'interface du Main Menu
+/// Script fait par Emile Deslauriers
+/// </summary>
 
 public class MainMenu : MonoBehaviour
 {
@@ -28,15 +32,15 @@ public class MainMenu : MonoBehaviour
         menuMainMenu.gameObject.SetActive(true); //GameObject pour le Menu Option est Visible/Activer
     }
 
-    public void StartGame()
+    public void StartGame() //fonction pour commencer le jeu
     {
         SceneManager.LoadScene(sceneStart); //Load la scene principale
-        PlayerPrefs.SetFloat("PlayerX", -3.52f); 
-        PlayerPrefs.SetFloat("PlayerY", -10.89f);
-        PlayerPrefs.SetFloat("PlayerZ", 0f);
+        PlayerPrefs.SetFloat("PlayerX", -3.52f); //position du X du joueur quand il spawn
+        PlayerPrefs.SetFloat("PlayerY", -10.89f); //position du Y du joueur quand il spawn
+        PlayerPrefs.SetFloat("PlayerZ", 0f); //position du Z du joueur quand il spawn
     }
 
-    public void Option()
+    public void Option() //fonction pour voir les options
     {
         btnReturn.gameObject.SetActive(true);
         menuHowToPlay.gameObject.SetActive(false);
@@ -44,7 +48,7 @@ public class MainMenu : MonoBehaviour
         menuMainMenu.gameObject.SetActive(false);
     }
 
-    public void ReturnToMainMenu()
+    public void ReturnToMainMenu() //fonction pour retourner au menu
     {
         btnReturn.gameObject.SetActive(false);
         menuHowToPlay.gameObject.SetActive(false);
@@ -52,7 +56,7 @@ public class MainMenu : MonoBehaviour
         menuMainMenu.gameObject.SetActive(true);
     }
 
-    public void HowToPlay()
+    public void HowToPlay() //fonction pour voir how to play
     {
         btnReturn.gameObject.SetActive(true);
         menuHowToPlay.gameObject.SetActive(true);
@@ -62,19 +66,19 @@ public class MainMenu : MonoBehaviour
         menuMainMenu.gameObject.SetActive(false);
     }
 
-    public void Story()
+    public void Story() //fonction pour voir l'histoire du jeu
     {
         menuStory.gameObject.SetActive(true);
         menuControl.gameObject.SetActive(false);
     }
 
-    public void Control()
+    public void Control() //fonction pour voir les controls du jeu
     {
         menuStory.gameObject.SetActive(false);
         menuControl.gameObject.SetActive(true);
     }
 
-    public void ExitGame()
+    public void ExitGame() //fonction pour quitter
     {
         Application.Quit(); //Quit l'application
     }
