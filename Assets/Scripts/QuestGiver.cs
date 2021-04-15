@@ -32,9 +32,13 @@ public class QuestGiver : MonoBehaviour
         
         questWindow.SetActive(false); //questWindow devien invisible
 
-        if (playerQuest.quest.questTitle == quest.questTitle) //si la quest suivit par le player a le meme nom que la quest
+        if (playerQuest.quest.questTitle == quest.questTitle && playerQuest.quest.isActive == true) //si la quest suivit par le player a le meme nom que la quest
         {
             quest.isActive = true; //quest is active
+        }
+        else 
+        {
+            quest.isActive = false;
         }
     }
 
@@ -44,6 +48,7 @@ public class QuestGiver : MonoBehaviour
         {
             OpenQuestWindow(); //appel la fonction OpenQuestWindow
         }
+        quest.goal.currentAmount = playerQuest.quest.goal.currentAmount;
     }
 
     public void OpenQuestWindow() //fonction pour ouvrir la quest window
@@ -71,6 +76,7 @@ public class QuestGiver : MonoBehaviour
         if (quest.questTitle == playerQuest.quest.questTitle && quest.goal.IsReached())
         { 
         playerQuest.TurnInQuest(); //appel la fonction TurnInQuest du script PlayerQuest
+        quest.isActive = false;
         questWindow.SetActive(false); //quest window invisible
         }
     }

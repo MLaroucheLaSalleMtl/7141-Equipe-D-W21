@@ -19,10 +19,6 @@ public class PlayerGoldExpLvl : MonoBehaviour
     public Text goldCountTxt; //point vers le gold counter
     public Text lvlCount; //point vers le level counter
 
-    //Fait par Marie-Lee Potvin
-    public static int doWeAddXp = 0;
-    public static int aLvlUp = 0;
-
     public void Update() //Fait par Émile Deslauriers
     {
         goldCountTxt.text = "Gold: " + goldOwned + "g"; //affiche le current gold du jouer sur le UI
@@ -34,9 +30,6 @@ public class PlayerGoldExpLvl : MonoBehaviour
         {
             expOwned -= expTotalToLevel; //current exp - exp pour level up
             lvlPlayer += 1; //current level +1
-
-            //Fait par Marie-Lee Potvin
-            aLvlUp = 1; //pour savoir si il y a eu un level up. Besoin de le savoir pour le script BattleManager qui va augmenter les stats du joueur
         }
     }
 }

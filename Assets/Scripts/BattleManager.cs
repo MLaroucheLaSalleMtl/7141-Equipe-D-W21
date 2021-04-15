@@ -50,19 +50,10 @@ public class BattleManager : MonoBehaviour
         state = BattleState.START; //declare que le state == START
         StartCoroutine(SetupBattle()); //appelle la fonction SetupBattle et appelle StartCoroutine
 
-        //partie fait par Marie-Lee Potvin
         playerStat.characterLevel = PlayerGoldExpLvl.lvlPlayer;
-        if (PlayerGoldExpLvl.aLvlUp == 1)
-        {
-            AddStat();  //puisque le joueur a augmenté de niveau comparativement au dernier combat, on augmente les stats
-            PlayerGoldExpLvl.aLvlUp = 0; //on remet la variable à 0, car on ne veut pas toujours augmenté les stats (seulement si il y avait eu un lvl up)
-        }
+        AddStat();
     }
 
-    void Update()
-    {
-        
-    }
 
     //partie fait par Emile Deslauriers
     IEnumerator SetupBattle() //fonction qui va principalement importer les stats prefab du joueur et de l'enemy
@@ -436,7 +427,5 @@ public class BattleManager : MonoBehaviour
         playerStat.currentHp += (int)(playerStat.currentHp * 0.01 * PlayerGoldExpLvl.lvlPlayer);
         playerStat.maxMana += (int)(playerStat.maxMana * 0.01 * PlayerGoldExpLvl.lvlPlayer);
         playerStat.currentMana += (int)(playerStat.currentMana * 0.01 * PlayerGoldExpLvl.lvlPlayer);
-
-        PlayerGoldExpLvl.aLvlUp = 0;
     }
 }
